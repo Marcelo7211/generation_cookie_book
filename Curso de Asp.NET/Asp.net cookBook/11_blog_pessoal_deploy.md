@@ -139,8 +139,8 @@ heroku version
    Como vamos trabalhar com um banco de dados remoto precisamos garantir que nossso projeto trabalhe com métodos assincronos,
    
    onde atraves da palavra reservada await e do uso de objetos do tipo task podemos garantir que as proximas instruções só serão realizadas quando a requisição para o banco for realizada, atualize as camadas abaixo do seu projeto
-   
- **AppContext.cs*  
+ 
+ <h4>AppContext.cs</h4>   
    
 ```c#
  
@@ -176,9 +176,8 @@ namespace blogPessoal.Data
 }  
    
 ```
- 
-   
-**IUserRepository.cs **  
+    
+ <h4>IUserRepository.cs</h4> 
    
 ```c#
    
@@ -203,8 +202,7 @@ namespace blogPessoal.Repository
    
 ```
    
-   
-**ITemaRepository.cs**  
+<h4>ITemaRepository.cs</h4>    
    
 ```c#
 
@@ -234,7 +232,8 @@ namespace blogPessoal.Repository
    
 ```
    
-**IPostagemRepository.cs**  
+
+<h4>IPostagemRepository.cs</h4> 
    
 ```c#
    
@@ -264,7 +263,8 @@ namespace blogPessoal.Repository
    
 ```
  
-**UserRepository.cs** 
+
+<h4>UserRepository.cs</h4> 
    
 ```c#
 using blogPessoal.Data;
@@ -328,7 +328,8 @@ namespace blogPessoal.Repository
    
 ```
    
-**TemaRepository.cs** 
+
+<h4>TemaRepository.cs</h4> 
    
 ```c#
 
@@ -405,7 +406,7 @@ namespace blogPessoal.Repository.impl
    
 ```
    
-**PostagemRepository.cs** 
+<h4>PostagemRepository.cs</h4> 
    
 ```c#
 using blogPessoal.Data;
@@ -496,8 +497,9 @@ namespace blogPessoal.Repository
 }   
    
 ```
-   
-**UserController.cs**  
+
+<h4>UserController.cs</h4> 
+ 
    
 ```c#
 
@@ -564,7 +566,7 @@ namespace blogPessoal.Controllers
    
 ```
    
-**TemaController.cs** 
+<h4>TemaController.cs</h4> 
    
 ```c#
  
@@ -664,7 +666,7 @@ namespace blogPessoal.Controllers
    
 ```
    
-**PostagemController.cs** 
+<h4>PostagemController.cs</h4> 
    
 ```c#
 
