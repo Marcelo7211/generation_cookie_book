@@ -133,8 +133,10 @@ heroku version
 **A versão pode ser diferente da imagem*
 
 <br />
-
+   
 <h2>👣 Passo 04 - Adicionar a Dependência do PostgreSQL no projeto</h2>
+
+<h2>👣 Passo 05 - Adicionar a Dependência do PostgreSQL no projeto</h2>
 
 
 O Heroku, na sua versão gratuita, utiliza o **PostgreSQL** como **SGBD**.  Estamos utilizando o **SQL-Server** para desenvolver o Blog Pessoal. Ambos são Banco de dados Relacionais e graças ao **Entity Framework Core **, não será necessário realizar nenhuma alteração no código do nosso aplicativo. A única mudança necessária, além de adicionar a **Dependência no nuget**,  e configurar a aplicação para utilizar o PostgreSQL. 
@@ -152,7 +154,7 @@ O Heroku, na sua versão gratuita, utiliza o **PostgreSQL** como **SGBD**.  Esta
 
 <div align="center"><img src="https://i.imgur.com/gcAd13C.png" title="source: imgur.com" /></div>    
 
-<h2>👣 Passo 05 - Configurar o Banco de Dados</h2>
+<h2>👣 Passo 06 - Configurar o Banco de Dados</h2>
 
 
 A Configuração do Banco de dados Local é diferente da configuração que será utilizada no Heroku. 
@@ -306,7 +308,7 @@ namespace blogPessoal
 
 
 
-<h2>👣 Passo 06 - Deploy com o Git</h2>
+<h2>👣 Passo 07 - Deploy com o Git</h2>
 
 Vamos preparar o nosso repositório local para subir a aplicação para o Heroku utilizando o Git.
 
@@ -356,7 +358,7 @@ git init
 
 <br />
 
-<h2>👣 Passo 7 - Login no Heroku</h2>
+<h2>👣 Passo 8 - Login no Heroku</h2>
 
 1. Digite o comando: 
 
@@ -382,7 +384,7 @@ heroku login
 
 <br /><br />
 
-<h2>👣 Passo 8 - Criar um novo projeto no Heroku</h2>
+<h2>👣 Passo 9 - Criar um novo projeto no Heroku</h2>
 
 
 
@@ -405,7 +407,7 @@ Se o nome escolhido for aceito, será exibida a mensagem abaixo:
 
 
 
-<h2>👣Passo 9 - Efetuar o Deploy</h2>
+<h2>👣Passo 10 - Efetuar o Deploy</h2>
 
 1. Para concluir o Deploy, digite o comando: 
 
@@ -421,7 +423,7 @@ git push heroku master
 
 
 
-<h2>👣 Passo 10 - Adicionar o Banco de dados no Heroku</h2>
+<h2>👣 Passo 11 - Adicionar o Banco de dados no Heroku</h2>
 
 
 
@@ -491,7 +493,7 @@ git push heroku master
 
 
 
-<h2>👣 Passo 11 - Testar o link e a aplicação</h2>
+<h2>👣 Passo 12 - Testar o link e a aplicação</h2>
 
 
 
