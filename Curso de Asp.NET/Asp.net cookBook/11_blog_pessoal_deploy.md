@@ -134,7 +134,629 @@ heroku version
 
 <br />
    
-<h2>👣 Passo 04 - Adicionar a Dependência do PostgreSQL no projeto</h2>
+<h2>👣 Passo 04 - Atualizando o projeto para uso de Task e métodos assincronos</h2>
+   
+   Como vamos trabalhar com um banco de dados remoto precisamos garantir que nossso projeto trabalhe com métodos assincronos,
+   
+   onde atraves da palavra reservada await e do uso de objetos do tipo task podemos garantir que as proximas instruções só serão realizadas quando a requisição para o banco for realizada, atualize as camadas abaixo do seu projeto
+   
+ **AppContext.cs*  
+   
+```c#
+ 
+ using blogPessoal.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Data
+{
+    public class AppContext : DbContext
+    {
+
+        public AppContext(DbContextOptions<AppContext> options) : base(options)
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Postagem>()
+            .HasOne(p => p.Tema)
+            .WithMany(b => b.Postagem);
+        }
+
+        public DbSet<Tema> Temas { get; set; }
+        public DbSet<Postagem> Postagens { get; set; }
+
+        public DbSet<User> Users { get; set; }
+    }
+}  
+   
+```
+ 
+   
+**IUserRepository.cs **  
+   
+```c#
+   
+using blogPessoal.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Repository
+{
+    public interface IUserRepository
+    {
+        User GetUserName(string usuario, string senha);
+
+
+        Task<User> CreateUser(User user);
+
+
+    }
+}   
+   
+```
+   
+   
+**ITemaRepository.cs**  
+   
+```c#
+
+using blogPessoal.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Repository
+{
+    public interface ITemaRepository
+    {
+        List<Tema> GetAll();
+
+        Task<Tema> GetById(int Id);
+
+        List<Tema> GetByDescricao(string descricao);
+
+        Task<Tema> Create(Tema tema);
+
+        Task<Tema> Update(Tema tema);
+
+        Task<Tema> Delete(int Id);
+    }
+}
+   
+```
+   
+**IPostagemRepository.cs**  
+   
+```c#
+   
+using blogPessoal.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Repository
+{
+    public interface IPostagemRepository
+    {
+        List<Postagem> GetAll();
+
+        Task<Postagem> GetById(int Id);
+
+        List<Postagem> GetTitulo(string Titulo);
+
+        Task<Postagem> Create(Postagem postagem);
+
+        Task<Postagem> Update(Postagem postagem);
+
+        Task<Postagem> Delete(int Id);
+    }
+}
+   
+```
+ 
+**UserRepository.cs** 
+   
+```c#
+using blogPessoal.Data;
+using blogPessoal.Model;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Repository
+{
+    public class UserRepository : IUserRepository
+    {
+        public readonly Data.AppContext _context;
+
+        public UserRepository(Data.AppContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<User> CreateUser(User user)
+        {
+            var aux = await _context.Users.FirstOrDefaultAsync(c => c.Id.Equals(user.Id));
+            if (aux != null)
+            {
+                return null;
+            }
+            else
+            {
+
+                var valueBytes = Encoding.UTF8.GetBytes(user.Senha);
+                user.Senha = System.Convert.ToBase64String(valueBytes);
+                _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
+
+                return user;
+            }
+
+        }
+
+        public User GetUserName(string usuario, string senha)
+        {
+
+            Task<User> UserReturn = _context.Users.Where(u => u.Usuario == usuario).FirstOrDefaultAsync();
+            var valueBytes = System.Convert.FromBase64String(UserReturn.Result.Senha);
+            string passwordDecode = Encoding.UTF8.GetString(valueBytes);
+            if (passwordDecode == senha)
+            {
+                return UserReturn.Result;
+            }
+            else
+            {
+                return null;
+            }
+
+
+
+        }
+    }
+}   
+   
+```
+   
+**TemaRepository.cs** 
+   
+```c#
+
+using blogPessoal.Model;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Repository.impl
+{
+    public class TemaRepository : ITemaRepository
+    {
+        public readonly Data.AppContext _context;
+
+        public TemaRepository(Data.AppContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<Tema> Create(Tema tema)
+        {
+            var aux = await _context.Temas.FirstOrDefaultAsync(c => c.Id.Equals(tema.Id));
+            if (aux != null)
+                return aux;
+            _context.Temas.AddAsync(tema);
+            await _context.SaveChangesAsync();
+
+            return tema;
+        }
+
+        public async Task<Tema> Delete(int id)
+        {
+            var temaDelete = await _context.Temas.FindAsync(id);
+            _context.Temas.Remove(temaDelete);
+            await _context.SaveChangesAsync();
+
+            return null;
+        }
+
+        public async Task<Tema> GetById(int Id)
+        {
+            try
+            {
+                var TemaReturn = await _context.Temas.FirstAsync(i => i.Id == Id);
+                return TemaReturn;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public List<Tema> GetAll()
+        {
+            return _context.Temas.ToListAsync().Result;
+        }
+
+        public List<Tema> GetByDescricao(string descricao)
+        {
+            var TemaReturn = _context.Temas.Where(p => p.Descricao.ToLower().Contains(descricao.ToLower())).ToListAsync().Result;
+            return TemaReturn;
+        }
+
+        public async Task<Tema> Update(Tema tema)
+        {
+            _context.Entry(tema).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return tema;
+        }
+    }
+}
+   
+```
+   
+**PostagemRepository.cs** 
+   
+```c#
+using blogPessoal.Data;
+using blogPessoal.Model;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Repository
+{
+    public class PostagemRepository : IPostagemRepository
+    {
+        public readonly Data.AppContext _context;
+        private readonly ITemaRepository temaRepository;
+
+        public PostagemRepository(AppContext context, ITemaRepository temaRepository)
+        {
+            _context = context;
+            this.temaRepository = temaRepository;
+
+        }
+
+        public async Task<Postagem> Create(Postagem postagem)
+        {
+
+
+            var aux = await _context.Postagens.FirstOrDefaultAsync(c => c.Id.Equals(postagem.Id));
+            if (aux != null)
+                return aux;
+
+            if (postagem.Tema != null)
+                postagem.Tema = await this.temaRepository.Create(postagem.Tema);
+
+            _context.Postagens.AddAsync(postagem);
+            await _context.SaveChangesAsync();
+
+            return postagem;
+        }
+
+
+        public async Task<Postagem> Delete(int id)
+        {
+            var postagemDelete = await _context.Postagens.FindAsync(id);
+            _context.Postagens.Remove(postagemDelete);
+            await _context.SaveChangesAsync();
+
+            return null;
+        }
+
+        public List<Postagem> GetAll()
+        {
+            return _context.Postagens.Include(p => p.Tema).ToListAsync().Result;
+        }
+
+        public async Task<Postagem> GetById(int id)
+        {
+            try
+            {
+                var PostagemReturn = await _context.Postagens.Include(p => p.Tema).FirstAsync(i => i.Id == id);
+                return PostagemReturn;
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+
+        public List<Postagem> GetTitulo(string Titulo)
+        {
+            var PostagemReturn = _context.Postagens.Include(p => p.Tema).Where(p => p.Titulo.ToLower().Contains(Titulo.ToLower())).ToListAsync();
+            return PostagemReturn.Result;
+        }
+
+        public async Task<Postagem> Update(Postagem postagem)
+        {
+            if (postagem.Tema != null)
+                postagem.Tema = await this.temaRepository.Create(postagem.Tema);
+
+            _context.Entry(postagem).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return postagem;
+
+        }
+    }
+}   
+   
+```
+   
+**UserController.cs**  
+   
+```c#
+
+using blogPessoal.Model;
+using blogPessoal.Repository;
+using blogPessoal.Service;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserController : ControllerBase
+    {
+
+        private readonly IUserRepository _userRepository;
+
+
+        public UserController(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+
+        }
+
+        [HttpPost]
+        [Route("login")]
+        [AllowAnonymous]
+        public ActionResult<dynamic> Login([FromBody] User model)
+        {
+
+            var user = _userRepository.GetUserName(model.Usuario, model.Senha);
+            if (user == null)
+                return Unauthorized(new { message = "Usuário ou senha inválidos" });
+            else
+            {
+                var userResult = new User { Id = user.Id, Nome = user.Nome, Usuario = user.Usuario, Senha = "" };
+
+                var token = TokenService.GenerateToken(userResult);
+                return new
+                {
+                    user = userResult,
+                    token = "Bearer " + token
+                };
+            }
+        }
+
+
+        [HttpPost]
+        [Route("cadastrar")]
+        [AllowAnonymous]
+        public async Task<ActionResult<User>> Cadastrar([FromBody] User user)
+        {
+
+            var newBook = await _userRepository.CreateUser(user);
+            return newBook;
+
+        }
+
+    }
+
+}
+   
+```
+   
+**TemaController.cs** 
+   
+```c#
+ 
+using blogPessoal.Model;
+using blogPessoal.Repository;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TemaController : ControllerBase
+    {
+        private readonly ITemaRepository _temaRepository;
+
+        public TemaController(ITemaRepository temaRepository)
+        {
+            _temaRepository = temaRepository;
+        }
+
+        [HttpGet]
+        [Authorize]
+        public List<Tema> GetAllTemas()
+        {
+            return _temaRepository.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        [Authorize]
+        public async Task<ActionResult<Tema>> GetByIdTema(int id)
+        {
+            var tema = await _temaRepository.GetById(id);
+            if (tema == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(tema);
+            }
+
+        }
+
+
+        [HttpGet("descricao/{descricao}")]
+        [Authorize]
+        public List<Tema> GetByDescricao(string descricao)
+        {
+            return _temaRepository.GetByDescricao(descricao);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<ActionResult<Tema>> PostTema([FromBody] Tema tema)
+        {
+            var temaReturn = await _temaRepository.Create(tema);
+            return CreatedAtAction(nameof(GetAllTemas), new { id = temaReturn.Id }, temaReturn);
+        }
+
+        [HttpPut]
+        [Authorize]
+        public async Task<ActionResult> PutTema([FromBody] Tema tema)
+        {
+
+            if (tema.Id == 0)
+                return BadRequest();
+            else
+            {
+                var temaUpdate = await _temaRepository.Update(tema);
+
+                return Ok(temaUpdate);
+
+            }
+
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize]
+        public async Task<ActionResult> DeleteTema(int id)
+        {
+            var temaToDelete = await _temaRepository.GetById(id);
+
+            if (temaToDelete == null)
+                return NotFound();
+
+            await _temaRepository.Delete(temaToDelete.Id);
+            return NoContent();
+
+
+        }
+    }
+
+}
+   
+```
+   
+**PostagemController.cs** 
+   
+```c#
+
+using blogPessoal.Model;
+using blogPessoal.Repository;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace blogPessoal.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PostagemController : ControllerBase
+    {
+
+        private readonly IPostagemRepository _postagemRepository;
+
+        public PostagemController(IPostagemRepository postagemRepository)
+        {
+            _postagemRepository = postagemRepository;
+        }
+
+        [HttpGet]
+        [Authorize]
+        public List<Postagem> GetAllPostagens()
+        {
+            return _postagemRepository.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        [Authorize]
+        public async Task<ActionResult<Postagem>> GetByIdPostagem(int id)
+        {
+            var postagem = await _postagemRepository.GetById(id);
+            if (postagem == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(postagem);
+            }
+        }
+
+        [HttpGet("titulo/{titulo}")]
+        [Authorize]
+        public List<Postagem> GetByTituloPostagem(string titulo)
+        {
+            return _postagemRepository.GetTitulo(titulo);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Tema>> PostPostagem([FromBody] Postagem postagem)
+        {
+            var newPostagem = await _postagemRepository.Create(postagem);
+            return Ok(newPostagem);
+        }
+
+
+        [HttpDelete("{id}")]
+        [Authorize]
+        public async Task<ActionResult> DeletePostagem(int id)
+        {
+            var postagemToDelete = await _postagemRepository.GetById(id);
+
+            if (postagemToDelete == null)
+                return NotFound();
+
+            await _postagemRepository.Delete(postagemToDelete.Id);
+            return NoContent();
+
+
+        }
+
+        [HttpPut]
+        [Authorize]
+        public async Task<ActionResult<Postagem>> PutPostagem([FromBody] Postagem postagem)
+        {
+            if (postagem.Id <= 0)
+                return BadRequest();
+
+            var postagemResult = await _postagemRepository.Update(postagem);
+
+            return Ok(postagemResult);
+        }
+    }
+}
+   
+```
+ 
 
 <h2>👣 Passo 05 - Adicionar a Dependência do PostgreSQL no projeto</h2>
 
@@ -155,7 +777,8 @@ O Heroku, na sua versão gratuita, utiliza o **PostgreSQL** como **SGBD**.  Esta
 <div align="center"><img src="https://i.imgur.com/gcAd13C.png" title="source: imgur.com" /></div>    
 
 <h2>👣 Passo 06 - Configurar o Banco de Dados</h2>
-
+   
+   
 
 A Configuração do Banco de dados Local é diferente da configuração que será utilizada no Heroku. 
 
