@@ -1,80 +1,60 @@
-# Manual de instalações das ferramentas do curso de .NET
+# Introdução ao JavaScript
+
+JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js,  Apache CouchDB e Adobe Acrobat. [do JavaScript]([https://docs.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/tutorials/](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript))
+
+## O que é o JavaScript
+
+O JavaScript é uma linguagem baseada em protótipos, multi-paradigma e dinâmica, suportando estilos de orientação a objetos, imperativos e declarativos (como por exemplo a programação funcional). Saiba mais sobre o JavaScript.
 
 
 
-## Instalando a IDE Visual Studios
 
-A instalação do Visual Studio é muito simples. Primeiramente, precisamos ter o arquivo de
-instalação da IDE, isso é bem fácil de encontrar. Eu estou indicando o site oficial do Visual Studio 2022 que segue o link:
+## Ambiente de Trabalho JavaScript Visual Studio Code
+
+
+**O Microsoft Visual Studio Code** é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código. Ele é customizável, permitindo que os usuários possam mudar o tema do editor, teclas de atalho e preferências. Ele é um software livre e de código aberto,[4][5] apesar do download oficial estar sob uma licença proprietária.[3]
+
+O Visual Studio Code é baseado no Electron, um framework que é usado para desenvolver aplicativos Node.js para o desktop rodando no motor de layout Blink. Apesar de usar o Electron como framework,[6] o software não usa o Atom e em seu lugar emprega o mesmo componente editor (apelidado "Monaco") usado no Visual Studio Team Services (anteriormente chamado de Visual Studio Online)
+
+## Instalando a IDE Visual Studios Code
+
+A instalação do Visual Studio Code é muito simples. Primeiramente, precisamos ter o arquivo de
+instalação da IDE, isso é bem fácil de encontrar.  segue o link:
 https://visualstudio.microsoft.com/pt-br/downloads/
 
-![enter image description here](https://i.imgur.com/Ssvkn2o.png)
+![enter image description here](https://i.imgur.com/V17W0f0.png)
 
-Escolha a opção Comunidade do seu sistema operacional.
-
-O Visual Studio comunidade é gratuito as outras opções são pagas e possuem apenas uma versão de avaliação gratuita.
-
-Com o download realizado com sucesso abra o arquivo instalador do Visual Studio
-
-![enter image description here](https://i.imgur.com/3WACKOj.png)
-
-Selecione a opção Asp.net e desenvolvimento web. E execute o download/instalação
-
-![enter image description here](https://i.imgur.com/CdvGXSi.png)
-
-Agora Vamos instalar o ASP.NET JDK 5 entre no link abaixo e selecione a opção do seu sistema operacional e a versão do seu processador
-
-![enter image description here](https://i.imgur.com/pPcYtim.png)
-
-depois de realizado o download instale o ASP.NET JDK 5  clicando no instalador e avançando os passos do instalador.
+Depois de Realizar o download, instale o vs code em sua maquina.
 
 
 
-| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | **IMPORTANTE:** *Realizar o download do Visual Studio 2022 e do SDK.5.0.404 do asp.net core e  manter instalado em sua maquina.* |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+## Extenções no Vscode
+
+Como um dos **Ambientes de Desenvolvimento Integrado** (IDE), mais queridos pelos desenvolvedores, o Visual Studio Code tem uma gama enorme de extensões em seu ecossistema que auxiliam no processo de escrita do código e independente de qualquer linguagem.
 
 
 
-### Faça o download do  SQL Server Management Studio no link abaixo	
+abra o seu vscode e clique em extenções
 
-<div align="center"><img src="https://i.imgur.com/TPfWZKL.png" title="source: imgur.com" width="90%"/>
-</div>
-
-
-​		
-
-<div align="left"> <a href="https://docs.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15" target="_blank"><b>Baixar o SQL Server Management Studio (SSMS)</i></b></a>
+![enter image description here](https://i.imgur.com/yyoCSaV.png)
 
 
-Instale o o SQL Server Management Studio no seu computador
 
-### Faça o download do  SQL Server  no link abaixo no modo desenvolvedor como descrito na imagem a abaixo	
+Na barra de pesquisa pesquise a extenção que deseja instalar  no seu pc
 
-<div align="center"><img src="https://i.imgur.com/ZP22N8m.png" title="source: imgur.com" width="90%"/>
-</div>
+![enter image description here](https://i.imgur.com/bkUS7uN.png)
 
 
-​		
 
-<div align="left"><a href="https://www.microsoft.com/pt-br/sql-server/sql-server-downloads" target="_blank"><b>Baixar o SQL Server</i></b></a>
+Instale a extenção clicando no botão instalar
 
-
-Instale o o SQL Server Management Studio no seu computador como no tutorial das imagens abaixo
-
-<div align="center"><img src="https://i.imgur.com/mYwH90J.png" title="source: imgur.com" width="90%"/>
-</div>		
+![enter image description here](https://i.imgur.com/34GLUql.png)
 
 
-instale a versão Básico.
 
-<div align="center"><img src="https://i.imgur.com/mYwH90J.png" title="source: imgur.com" width="90%"/>
-</div>		
+### Extenções utilizadas no curso JavaScript generation
 
-
-​						
-
-<div align="center"><img src="https://i.imgur.com/EeBBUub.png" title="source: imgur.com" width="90%"/>
-</div>		
-
-
-#### Reinicie o seu computador
+- **JavaScript (ES6) code snippets** (Esta extensão contém trechos de código para JavaScript na sintaxe ES6 para o editor Vs Code (suporta JavaScript e TypeScript).)
+- **JavaScript and TypeScript Nightly** (Extensão do VS Code que permite a compilação noturna do TypeScript (typescript@next) como a versão interna do TypeScript do VS Code usada para alimentar o JavaScript e o TypeScript IntelliSense.).)
+- **HTML Snippets** (Esta extensão contém trechos de código HTML  para o editor Vs Code )
+- **HTML CSS Support** (Esta extensão contém trechos de código HTML e css  para o editor Vs Code )

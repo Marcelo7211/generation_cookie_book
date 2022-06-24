@@ -1,6 +1,6 @@
 # Introdução ao JavaScript
 
-JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js,  Apache CouchDB e Adobe Acrobat. [do C#.]([https://docs.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/tutorials/](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript))
+JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js,  Apache CouchDB e Adobe Acrobat. [do JavaScript]([https://docs.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/tutorials/](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript))
 
 ## O que é o JavaScript
 
@@ -18,34 +18,50 @@ O Visual Studio Code é baseado no Electron, um framework que é usado para dese
 
 ## Instalando a IDE Visual Studios Code
 
-A instalação do Visual Studio é muito simples. Primeiramente, precisamos ter o arquivo de
-instalação da IDE, isso é bem fácil de encontrar. Eu estou indicando o site oficial do Visual Studio 2022 que segue o link:
+A instalação do Visual Studio Code é muito simples. Primeiramente, precisamos ter o arquivo de
+instalação da IDE, isso é bem fácil de encontrar.  segue o link:
 https://visualstudio.microsoft.com/pt-br/downloads/
 
-![enter image description here](https://i.imgur.com/Ssvkn2o.png)
+![enter image description here](https://i.imgur.com/V17W0f0.png)
 
-Escolha a opção Comunidade do seu sistema operacional.
-
-O Visual Studio comunidade é gratuito as outras opções são pagas e possuem apenas uma versão de avaliação gratuita.
-
-Com o download realizado com sucesso abra o arquivo instalador do Visual Studio
-
-![enter image description here](https://i.imgur.com/3WACKOj.png)
-
-Selecione a opção Asp.net e desenvolvimento web. E execute o download/instalação
-
-![enter image description here](https://i.imgur.com/CdvGXSi.png)
-
-Agora Vamos instalar o ASP.NET JDK 5 entre no link abaixo e selecione a opção do seu sistema operacional e a versão do seu processador
-
-![enter image description here](https://i.imgur.com/pPcYtim.png)
-
-depois de realizado o download instale o ASP.NET JDK 5  clicando no instalador e avançando os passos do instalador.
+Depois de Realizar o download, instale o vs code em sua maquina.
 
 
 
-| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | **IMPORTANTE:** *Realizar o download do Visual Studio 2022 e do SDK.5.0.404 do asp.net core e  manter instalado em sua maquina.* |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+## Extenções no Vscode
+
+Como um dos **Ambientes de Desenvolvimento Integrado** (IDE), mais queridos pelos desenvolvedores, o Visual Studio Code tem uma gama enorme de extensões em seu ecossistema que auxiliam no processo de escrita do código e independente de qualquer linguagem.
+
+
+
+abra o seu vscode e clique em extenções no botão indicado
+
+![enter image description here](https://i.imgur.com/yyoCSaV.png)
+
+
+
+Na barra de pesquisa pesquise a extenção que deseja instalar  no seu pc
+
+![enter image description here](https://i.imgur.com/bkUS7uN.png)
+
+
+
+Instale a extenção clicando no botão instalar
+
+![enter image description here](https://i.imgur.com/34GLUql.png)
+
+
+
+### Extenções utilizadas no curso JavaScript generation
+
+- **JavaScript (ES6) code snippets** (Esta extensão contém trechos de código para JavaScript na sintaxe ES6 para o editor Vs Code (suporta JavaScript e TypeScript).)
+- **JavaScript and TypeScript Nightly** (Extensão do VS Code que permite a compilação noturna do TypeScript (typescript@next) como a versão interna do TypeScript do VS Code usada para alimentar o JavaScript e o TypeScript IntelliSense.).)
+- **HTML Snippets** (Esta extensão contém trechos de código HTML  para o editor Vs Code )
+- **HTML CSS Support** (Esta extensão contém trechos de código HTML e css  para o editor Vs Code )
+
+
+
+
 
 
 
@@ -93,10 +109,10 @@ impressora e etc.
 
 
 Em nosso exemplo, nosso programa apenas imprime “Hello World” na tela. Para fazer
-isso, usamos o método console.log Todo texto (string) em C#é delimitado por
-aspas duplas, e toda instrução(comando) deve terminar com um ponto e vírgula. Note
+isso, usamos o método console.log Todo texto (string) em Javascript é delimitado por
+aspas duplas. Note
 também que o texto “Hello World” está entre parênteses, que indica o início e término
-de um parâmetro do método.
+de um parâmetro de uma função.
 
 ```javascript
 console.log("Hello, World");
@@ -153,12 +169,9 @@ Para criar um idenficador (nome da variável) em JavaScript, precisamos seguir a
 regras, listadas a seguir:
 
 >  - Deve conter apenas letras, _ (underline), $ ou os números de 0 a 9.
->  - Deve obrigatoriamente se iniciar por uma letra (preferencialmente),     ou $.
+>  - Deve obrigatoriamente se iniciar por uma letra (preferencialmente).
 >   - Deve iniciar com uma letra minúscula (boa práca).   Não pode    conter espaços Não podemos usar palavras-chave da linguagem .
 >    - O nome deve ser único dentro de um escopo
-
-Além disso, o JavaScript é case sensive, o que significa que os nomes de variáveis
-diferenciam maiúsculas de minúsculas.
 
 Sintaxe:
 
@@ -215,7 +228,7 @@ outros pontos do programa.
 Uma classe pode conter variáveis que são declaradas fora dos métodos, chamadas de
 Variáveis de Instância. São usadas pelos objetos para armazenar seus estados.
 
-Seus valores são específicos de cada instância e não são comparlhados entre as
+Seus valores são específicos de cada instância e não são compartlhados entre as
 instâncias.
 
 **Variáveis de Classe**
@@ -373,7 +386,7 @@ Vejamos o exemplo abaixo para identificar essas duas cláusulas:
 ```javaScript
 string nome = Console.ReadLine();
 ```
-```
+```javascript
 console.log("Nome: ");
 var nome = console.log();
 console.log("Peso: ");
@@ -480,7 +493,7 @@ verdadeiro.
 
 Sintaxe:
 
-```
+```javascript
 switch (Expressao){
 case valor1: conjuntoDeSentencas;
 break;
@@ -809,6 +822,60 @@ definir a estrutura de programas de computadores, baseado nos conceitos do mundo
 real, sejam eles reais ou abstratos. A ideia é simular as coisas que existem e acontecem
 no mundo real no mundo virtual.
 
+
+
+| <img src="https://i.imgur.com/hOgWvSc.png" title="source: imgur.com" width="100px"/> | **IMPORTANTE:** *Para trabalhar com orientação objeto utilizaremos no curso o superset do JavaScript TypeScript* |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+
+
+## TypeScript
+
+***TypeScript*** é uma linguagem de programação de código aberto desenvolvida pela . É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem. Tipos fornecem uma maneira de descrever a forma de um objeto, fornecendo melhor documentação e permitindo que o TypeScript valide se seu código está funcionando corretamente. Como TypeScript é um superconjunto de JavaScript, os programas JavaScript existentes também são programas TypeScript válidos.
+
+
+
+### Exemplo de código utilizando JavaScript
+
+```javaScript
+var nome = "João";
+var idade = 20;
+var possuiDoutorado = false;
+
+nome = 20; // isso é permitido em JavaScript e pode comprometer o algoritmo ao longo da execução.
+```
+
+
+
+### Exemplo de código utilizando TypeScript
+
+```typescript
+var nome:string = "João";
+var idade:number = 20;
+var possuiDoutorado:boolean = false;
+
+
+nome = 20; // isso não é permitido em TypeScript o algoritmo impede que uma variavel fortemente tipada com string receba um valor numerico, sendo assim protegendo a integridade do algoritmo
+```
+
+
+
+### Vantagens de se utilizar TypeScript
+
+- O TypeScript apresenta erros no momento da organização, enquanto o JavaScript, no tempo de execução.
+- O TypeScript oferece as vantagens da composição estática discricionária: os tipos de TS podem ser adicionados a fatores, capacidades, propriedades e assim por diante.
+- O TypeScript sustenta especificamente a composição estática. A composição estática pode ser valiosa para ajudar a arquivar capacidades, explicar a utilização e diminuir a sobrecarga psicológica (dicas de tipo de interface e obtenção de erros esperados de programação contínua).
+- O TypeScript é executado em qualquer programa ou motor JavaScript.
+- Ferramentas extraordinárias com IntelliSense que fornecem pistas dinâmicas como o código adicional.
+- TypeScript ajuda na organização do código.
+- TypeScript tem uma ideia de namespace ao caracterizar um módulo.
+- As explicações do TypeScript podem ser discricionárias.
+- TypeScript mantém interfaces.
+- Os módulos gerenciadores do TypeScript oferecem um destaque entre outros insights do engenheiro IDE.
+- O TypeScript tem uma documentação melhor para APIs que está em um estado de harmonia com o código-fonte. Algumas organizações relatam uma diminuição nos bugs quando mudam para o TypeScript.
+
+
+
 ### Classes e Objetos
 
 Em javaScript os programas são escritos em pequenos pedaços separados, chamados de
@@ -848,7 +915,7 @@ Colocamos uma classe genérica _Pessoa_ , onde teria que guardar os vários peda
 nome, então para isso teríamos que criar alguns atributos para a mesma, por exemplo:
 
 
-```javaScript
+```typescript
 class Pessoa {
 	private  primeiroNome: string;
 	private  ultimoNome: string;
@@ -863,7 +930,9 @@ poderá acessá-lo e manipular o mesmo.
 Mas não basta criar os atributos, temos que também dar algumas funcionalidades para
 os mesmos, para isso criamos um método para retornar o nome completo por exemplo.
 
-```javaScript
+
+
+```typescript
 class Pessoa {
 	private  primeiroNome: string;
 	private  ultimoNome: string;
@@ -876,6 +945,8 @@ class Pessoa {
 }
 
 ```
+
+
 
 A primeira linha, public getNomeCompleto(), especifica o método. Primeiro,
 declara-se, através da palavra-chave public, que o método é público – isto é, qualquer
@@ -901,12 +972,12 @@ Até agora ainda não construímos nenhum objeto, para isto javaScript tem uma f
 chamada _construtor_. Geralmente os construtores tem o mesmo nome da classe. Esse
 construtor cria um novo objeto e este novo objeto é armazenado na variável _pessoa_.
 
-```
+```typescript
 Pessoa pessoa = new Pessoa();
 ```
 Agora vamos criar uma pessoa chamada Francisco Pinho Nunes.
 
-```javaScript
+```typescript
 
 Pessoa pessoa = new Pessoa();
 pessoa.primeiroNome = “Francisco”;
@@ -919,7 +990,7 @@ No entanto, isto não é possível porque os atributos são privados. Apenas os 
 classe _Pessoa_ podem acessá-los. Isso pode ser solucionado de várias maneiras, e uma
 das mais elegantes é criando o nosso próprio construtor, como abaixo:
 
-```javaScript
+```typescript
 function Pessoa(primeiro, meio, ultimo ) {
     primeiroNome = primeiro;
     ultimoNome = ultimo;
@@ -935,13 +1006,17 @@ executa algum procedimento sobre o objeto criado pelo comando _new_. Este constr
 no caso, recebe os nomes como parâmetros e os atribui aos atributos.
 
 
-```
+
+
+```typescript
 Pessoa pessoa = new Pessoa( "Francisco", "Pinho", "Nunes" );
 ```
 
+
+
 Só para idenficar, vejamos como ficou a classe _Pessoa_ completa:
 
-```c#
+```typescript
 
 	class  Pessoa
 	{
@@ -967,7 +1042,7 @@ Só para idenficar, vejamos como ficou a classe _Pessoa_ completa:
 E a classe ProgramaNome, que utiliza a classe Pessoa para gerar um nome completo a
 partir das partes.
 
-```c#
+```typescript
 Pessoa pessoa = new Pessoa("Francisco","Pinho","Nunes");
 console.log(pessoa.getNomeCompleto());
 
@@ -980,7 +1055,7 @@ No código-fonte da classe Aeronave, vamos criar um método chamado
 alterarTotalAssentos, que receberá um argumento com o novo número de passageiros a
 ser atribuído à variável de instância totalAssentos.
 
-```
+```typescript
 class Aeronave {
     totalAssentos:number;
     assentosReservados:number;
@@ -1032,7 +1107,7 @@ do programa, já que a restrição de acesso nos permite idenficar quem consegue
 modificá-la.
 Exemplo:
 
-```javaScript
+```typescript
 class Carro {
     
     private velocidade: number;
@@ -1099,7 +1174,7 @@ Por exemplo, poderíamos ter uma classe Animal que representasse animais em gera
 as atividades que todos eles executam. Uma dessas atividades é comer, e nossa classe
 poderia ser como a abaixo.
 
-```javaScript
+```typescript
 class Animal {
 
     comer(alimento:string):void {
@@ -1112,13 +1187,13 @@ Uma classe de mamíferos _estenderia_ a classe de animais, porque mamíferos pod
 coisas que outros animais não podem – por exemplo, gerar leite. Uma classe Mamifero
 estenderia a classe _Animal_ usando a sinal **:** em sua declaração:
 
-```javaScript
+```typescript
 class Mamifero implements Animal {
 }
 ```
 Um novo método, _lactar()_ , também poderia ser adicionado:
 
-```javaScript
+```typescript
 lactar():string {
 return "leite" ;
 }
@@ -1127,7 +1202,7 @@ Como mamíferos são animais, também precisam do método _comer()_ , e aí entr
 vantagens da herança: como a classe Mamífero estende a classe Animal, ela _herda_ todos
 os métodos de Animal, então não é preciso reescrevê-los.
 
-```javaScript
+```typescript
 class AnimaisAcao {
 
 		Animal animal = new Animal();
@@ -1169,7 +1244,7 @@ Abaixo é possível ver um exemplo de uma interface chamada FiguraGeometrica_ co
 assinaturas de métodos que virão a ser implementados pelas classes referentes às
 figuras geométricas.
 
-```javaScript
+```typescript
 interface FiguraGeometrica
     {
         
@@ -1189,7 +1264,7 @@ Sintaxe:
 
 Onde:
 
-```javaScript
+```typescript
 nome_classe – Nome da classe a ser implementada.
 nome_Interface – Nome da interface a se implementada pela classe.
 ```
@@ -1198,7 +1273,7 @@ chamada Quadrado e outra Triangulo.
 
 Classe Quadrado
 
-```javaScript
+```typescript
 class Quadrado implements FiguraGeometrica {
 	private lado:number;
 
@@ -1230,7 +1305,7 @@ class Quadrado implements FiguraGeometrica {
 ```
 Classe Triangulo
 
-```javaScript
+```typescript
 class Triangulo implements FiguraGeometrica {
 
 	private base:number;
@@ -1320,7 +1395,7 @@ Se você tem uma _class Animal_ sabe que todo animal come, sendo que Cães por e
 comem ração e Tigres carne. Você pode chamar o método comer nessas 2 classes
 mesmo sabendo que elas se comportam diferentemente.
 
-```javaScript
+```typescript
 class Animal {
 	public comer():void {
 		console.log( "Animal Comendo..." );
@@ -1342,7 +1417,7 @@ class Tigre implements Animal {
 
 No caso a sua chamado de método polimórfico ficaria assim:
 
-```javaScript
+```typescript
 class Test {
 	public  fazerAnimalComer:void( animal:Animal ) {
 	animal.comer();
@@ -1401,7 +1476,7 @@ Entre outros;
 Exemplo da ulização do bloco try/catch:
 ```
 
-```javaScript
+```typescript
 var frase:string = '';
 var novaFrase:string = '';
 
@@ -1432,7 +1507,7 @@ importando o que acontecer dentro do bloco try-catch.
 Não é possível deixar um bloco try-catch-finally sem executar sua parte finally.
 Vejamos um exemplo para este bloco:
 
-```javaScript
+```typescript
 let x = prompt();
 try { 
   if(x == "")  throw "is Empty";
@@ -1467,7 +1542,7 @@ Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar
 ### Array
 
 
-```javaScript
+```typescript
 var salmons:string[] = []
 salmons.push("chinook");
 salmons.push("coho");
@@ -1487,7 +1562,7 @@ O exemplo a seguir é igual ao exemplo anterior, exceto que um inicializador de 
 
 
 
-```javaScript
+```typescript
 // Create a list of strings by using a
 // collection initializer.
 var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
@@ -1502,7 +1577,7 @@ Você pode usar uma instrução [for](https://docs.microsoft.com/pt-br/dotnet/cs
 
 O exemplo a seguir itera nos elementos de uma coleção usando `for` em vez de `foreach`.
 
-```javaScript
+```typescript
 // Create a list of strings by using a
 // collection initializer.
 var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
@@ -1516,7 +1591,7 @@ for(let index = 0; index < salmons.length; index++) {
 
 O exemplo a seguir remove um elemento da coleção, especificando o objeto a ser removido.
 
-```javaScript
+```typescript
 var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
 
 for( var i = 0; i < salmons.length; i++){ 
@@ -1533,7 +1608,7 @@ for( var i = 0; i < salmons.length; i++){
 
 A instrução executa uma instrução ou um bloco de instruções para cada elemento em uma instância do tipo que implementa a interface ou , como mostra o `foreach` exemplo a [System.Collections.IEnumerable](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.ienumerable) [System.Collections.Generic.IEnumerable](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.ienumerable-1) seguir:
 
-```
+```typescript
 const fruits = ["apple", "orange", "cherry"];
 
 fruits.forEach(element => {
@@ -1548,82 +1623,282 @@ A `foreach` instrução não está limitada a esses tipos. Você pode usá-lo co
 
 
 
+# Métodos manipulação string
 
-| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes no formato de data do DateTime |
-| ------------------------------------------------------------ | :----------------------------------------------------------- |
+Veja alguns métodos de manipulação de string em JavaScript.
+
+### String.prototype.includes()
+
+ método **includes()** determina se um conjunto de caracteres pode ser encontrado dentro de outra string, retornando `true` ou `false`.
+
+```typescript
+str.includes(searchString[, position])
+
+var str = 'Ser, ou não ser, eis a questão.';
+
+console.log(str.includes('Ser'));         // true
+console.log(str.includes('questão'));     // true
+console.log(str.includes('não existe'));  // false
+console.log(str.includes('ser', 1));      // true
+console.log(str.includes('SER'));   
+```
+
+### String.prototype.substring()
+
+Com este método conseguimos recuperar partes de uma string, apenas informando o índice de início (em uma das sobrecargas), semelhante a como foi feito com o método Remove. Veja como pegar trechos de uma frase qualquer.
+
+```typescript
+str.substring(indexStart[, indexEnd])
+
+var anyString = "Mozilla";
+
+// Mostra "Moz"
+console.log(anyString.substring(0,3));
+console.log(anyString.substring(3,0));
+
+// Mostra "lla"
+console.log(anyString.substring(4,7));
+console.log(anyString.substring(7,4));
+
+// Mostra "Mozill"
+console.log(anyString.substring(0,6));
+
+// Mostra "Mozilla"
+console.log(anyString.substring(0,7));
+console.log(anyString.substring(0,10));
+```
+
+### String.prototype.toLowerCase()
+
+Com este método conseguimos converter qualquer string para letras minúsculas. Veja como é bem simples seu uso.
 
 
 
-# Métodos da Classe String
+```typescript
+str.toLowerCase()
 
-A classe **String**, do namespace System do **.NET Framework** é muito útil, provavelmente todos os desenvolvedores já utilizaram ao menos um método muito conhecido que retornar um objeto desse tipo, o **ToString()**
+console.log('ALFABETO'.toLowerCase()); // 'alfabeto'
+```
 
-### String.Format
+### String.prototype.toUpperCase()
 
-Começando pelos métodos com membros estáticos, vamos falar do **Format**. Este método é uma mão na roda para os desenvolvedores que desejam formatar seus textos sem muitas preocupações, de uma forma rápida e simples.
+Função oposta ao método ToLower, que faz toda a string ficar maiúscula. 
 
-```javaScript
-private void btnExibir_Click(object sender, EventArgs e) {
-	txtTexto.Text = String.Format("Posso incluir o número {0}, {1} e {2} aqui!",
-					10, 20, 30);
+```typescript
+str.toUpperCase()
+
+console.log('alfabeto'.toUpperCase()); // 'ALFABETO'
+```
+
+
+
+# Métodos manipulação array
+
+Veja alguns métodos de manipulação de string em JavaScript.
+
+
+
+### Array.prototype.push()
+
+O método **push()** adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.
+
+```typescript
+var numeros = [1, 2, 3];
+numeros.push(4);
+
+console.log(numeros); // [1, 2, 3, 4]
+
+numeros.push(5, 6, 7);
+
+console.log(numeros); // [1, 2, 3, 4, 5, 6, 7]
+```
+
+
+
+### Array.prototype.pop()
+
+O método **pop()** remove o **último** elemento de um array e retorna aquele elemento.
+
+```typescript
+var meuPeixe = ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao'];
+
+console.log(meuPeixe); // ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao']
+
+var meuPeixePop = meuPeixe.pop();
+
+console.log(meuPeixe); // ['acara-bandeira', 'palhaco', 'mandarim' ]
+
+console.log(meuPeixePop); // 'esturjao'
+```
+
+
+
+### Array.prototype.indexOf()
+
+O método **indexOf()** retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
+
+```typescript
+var array = [2, 5, 9];
+array.indexOf(2);     // 0
+array.indexOf(7);     // -1
+array.indexOf(9, 2);  // 2
+array.indexOf(2, -1); // -1
+array.indexOf(2, -3); // 0
+```
+
+
+
+### Array.prototype.includes()
+
+O método includes`()` determina se um array contém um determinado elemento, retornando `true` ou `false` apropriadamente.
+
+```typescript
+[1, 2, 3].includes(2);     // true
+[1, 2, 3].includes(4);     // false
+[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(3, -1); // true
+[1, 2, NaN].includes(NaN); // true
+```
+
+
+
+### Array.prototype.splice()
+
+O método **splice()** altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
+
+```typescript
+var myFish = ["angel", "clown", "mandarin", "surgeon"];
+
+//remove 0 elementos a partir do índice 2, e insere "drum"
+var removed = myFish.splice(2, 0, "drum");
+//myFish é ["angel", "clown", "drum", "mandarin", "surgeon"]
+//removed é [], nenhum elemento removido
+
+//remove 1 elemento do índice 3
+removed = myFish.splice(3, 1);
+//myFish é ["angel", "clown", "drum", "surgeon"]
+//removed é ["mandarim"]
+
+//remove 1 elemento a partir do índice 2, e insere "trumpet"
+removed = myFish.splice(2, 1, "trumpet");
+//myFish é ["angel", "clown", "trumpet", "surgeon"]
+//removed é ["drum"]
+
+//remove 2 elementos a partir do índice 0, e insere "parrot", "anemone" e "blue"
+removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
+//myFish é ["parrot", "anemone", "blue", "trumpet", "surgeon"]
+//removed é ["angel", "clown"]
+
+//remove 2 elementos a partir do indice 3
+removed = myFish.splice(3, Number.MAX_VALUE);
+//myFish é ["parrot", "anemone", "blue"]
+//removed é ["trumpet", "surgeon"]
+```
+
+
+
+### Array.prototype.toString()
+
+O método `**toString()**` retorna uma string representando um array específico e seus elementos.
+
+```typescript
+var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
+var myVar = monthNames.toString(); // atribui 'Jan,Feb,Mar,Apr' para myVar.
+```
+
+
+
+### Array.prototype.forEach()
+
+O método `forEach()` executa uma dada função em cada elemento de um array.
+
+```typescript
+function logArrayElements(element, index, array) {
+    console.log("a[" + index + "] = " + element);
 }
+[2, 5, 9].forEach(logArrayElements);
 ```
 
-### String.IsNullOrEmpty
 
-O outro método com membro estático que iremos falar é o **IsNullOrEmpty**, muito útil para validar se o valor de um TextBox é nulo ou vazio. Na **Listagem 2** vemos um exemplo com este método.
 
-**Listagem 2:** Método IsNullOrEmpty em ação
+### Array.prototype.map()
 
-```javaScript
-if (String.IsNullOrEmpty(txtTexto.Text))
-{
-	Console.WriteLine("Campo vazio!");
-}
+O método **map()** invoca a função `callback` passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+
+```typescript
+var numbers = [1, 4, 9];
+var roots = numbers.map(Math.sqrt);
+// roots é [1, 2, 3], numbers ainda é [1, 4, 9]
 ```
 
-### Contains
 
-Este método é parecido com o operador [LIKE](http://www.devmedia.com.br/sql-select-guia-para-iniciantes/29530), da linguagem SQL. Sua função é verificar se uma determinada string contém o valor informado em seu parâmetro.
 
-Veja na Listagem 3 um exemplo em que se busca a palavra String e, se achar, é exibida uma mensagem para usuário.
-
-**Listagem 3:** Busca por parte de uma string com o método Contains
-
-```javaScript
-if (txtTexto.Text.Contains("String"))
-{
-	Console.WriteLine("Você digitou String!");
-}
+```typescript
+var numbers = [1, 4, 9];
+var doubles = numbers.map(function(num) {
+  return num * 2;
+});
+// doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
 ```
 
-### Substring
 
-Com este método conseguimos recuperar partes de uma string, apenas informando o índice de início (em uma das sobrecargas), semelhante a como foi feito com o método Remove. Veja como pegar trechos de uma frase qualquer, na **Listagem 7** e o resultado na **Figura 6**.
 
-**Listagem 7:** Recuperando partes de uma string
+# Arrow functions
 
-```javaScript
-Console.WriteLine(txtTexto.Text.Substring(6));
+Uma **expressão \*arrow function\*** possui uma sintaxe mais curta quando comparada a uma expressão de função (*[function expression](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/function)*) e não tem seu próprio *[this](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this)*, *[arguments](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)*, *[super](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/super)* ou *[new.target](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)*. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtoras (*constructors*).
+
+
+
+```typescript
+const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+console.log(materials.map(material => material.length));
+// expected output: Array [8, 6, 7, 9]
 ```
 
-### ToLower
 
-Com este método conseguimos converter qualquer string para letras minúsculas. Veja como é bem simples seu uso, na **Listagem 8** e o resultado na **Figura 7**.
 
-**Listagem 8:** Fazendo a string ficar minúscula
+### Funções mais curtas
 
-```javaScript
-Console.WriteLine(txtTexto.Text.ToLower());
+```typescript
+var elements = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+elements.map(function(element) {
+  return element.length;
+}); // esta sentença retorna o array: [8, 6, 7, 9]
+
+// A função regular acima pode ser escrita como a arrow function abaixo
+elements.map((element) => {
+  return element.length;
+}); // [8, 6, 7, 9]
+
+// Quando só existe um parâmetro, podemos remover os parênteses envolvendo os parâmetros:
+elements.map(element => {
+  return element.length;
+}); // [8, 6, 7, 9]
+
+// Quando a única sentença em uma arrow function é `return`, podemos remover `return` e remover
+// as chaves envolvendo a sentença
+elements.map(element => element.length); // [8, 6, 7, 9]
+
+// Neste caso, porque só precisamos da propriedade length, podemos usar o parâmetro de destruição (destructing parameter):
+// Note que a string `"length"` corresponde a propriedade que queremos obter enquanto que a
+// obviamente propriedade não especial `lengthFooBArX` é só o nome de uma variável que pode ser mudado
+// para qualquer nome válido de variável que você quiser
+elements.map(({ "length": lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
+
+// Esta atribuição de parâmetro de destruição (destructing parameter) pode ser escrita como visto abaixo. Entretanto, note que
+// não há um específico `"length"` para selecionar qual propriedade nós queremos obter. Ao invés disso, o nome literal
+// da própria variável `length` é usado como a propriedade que queremos recuperar do objeto.
+elements.map(({ length }) => length); // [8, 6, 7, 9]
 ```
-
-### ToUpper
-
-Função oposta ao método ToLower, que faz toda a string ficar maiúscula. Veja o exemplo na **Listagem 9** e o resultado na **Figura 8**.
-
-**Listagem 9:** Fazendo a string ficar maiúscula
-
-```javaScript
-Console.WriteLine(txtTexto.Text.ToUpper());
-```
-
