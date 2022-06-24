@@ -84,13 +84,13 @@ impressora e etc.
 
 
 Em nosso exemplo, nosso programa apenas imprime “Hello World” na tela. Para fazer
-isso, usamos o método Console.WriteLine Todo texto (string) em C#é delimitado por
+isso, usamos o método console.log Todo texto (string) em C#é delimitado por
 aspas duplas, e toda instrução(comando) deve terminar com um ponto e vírgula. Note
 também que o texto “Hello World” está entre parênteses, que indica o início e término
 de um parâmetro do método.
 
-```c#
-Console.WriteLine("Hello, World");
+```javascript
+console.log("Hello, World");
 ```
 
 
@@ -100,81 +100,35 @@ Console.WriteLine("Hello, World");
 
 
 
-### Método Console.ReadLine();
+### Método prompt();
 
-O pacote using System; disponibilizou o método Console.ReadLine() , que implementa operações
+O método prompt()  que implementa operações
 de entrada de dados pelo teclado.
-Alguns exemplos do método Console.ReadLine();
 
 **Entrada de texto digitado pelo usuário**
 
-```c#
-string userName = Console.ReadLine();
+```javascript
+string userName = prompt();
 ```
 
 retorna uma cadeia de caracteres simples, ou seja, que não usa o
 caractere espaço em branco;
 
-**Entrada de números inteiros digitado pelo usuário**
-
-```c#
-int age = Console.ReadLine();
-```
-
-int nextInt() - retorna um número inteiro;
-
-**Entrada de números de ponto flutuando digitado pelo usuário**
-
-```c#
-double price = Console.ReadLine();
-```
-
-**Entrada de números de ponto flutuando digitado pelo usuário**
-
-```c#
-float price = Console.ReadLine();
-```
-
-**Entrada de dados booleano Verdadeiro ou Falso digitado pelo usuário**
-
-```c#
-bool price = Console.ReadLine();
-```
 
 **Exemplo de um programa ulizando a classe Scanner:**
 
-```c#
-using  System;
-  
-namespace  MyApplication
+```javascript
+var signo = prompt("Qual é o seu signo?");
 
-{
-
-	class  Program
-
-	{
-
-	static  void  Main(string[] args)
-
-		{
-
-		// Digite seu nome de usuário e pressione enter
-
-		Console.WriteLine("Enter username:");
-
-		// Cria uma variável de string e obtém a entrada do usuário do teclado e armazena na variável
-
-		string  userName = Console.ReadLine();
-
-		// Imprima o valor da variável (userName), que 	exibirá o valor de entrada
-
-		Console.WriteLine("Username is: " + userName);
-
-		}
-
-	}
-
+if (signo.toLowerCase() == "escorpião") {
+  alert("Legal! Eu sou de Escorpião também!");
 }
+
+// há muitas formas de se usar o recurso prompt
+var sign = window.prompt(); // abrir uma janela de promtpt em branco
+var sign = prompt();       //  abrir uma janela de promtpt em branco
+var sign = window.prompt('Você está se sentindo com sorte'); // abrir uma janela com o texto "Você está se sentindo com sorte"
+var sign = window.prompt('Você está se sentindo com sorte', 'certamente'); // abrir uma janela com o texto "Você está se sentindo com sorte" e com o valor padrão "certamente"
 ```
 
 | <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar a comunicação para a leitura dos materias e para perguntar para o instrutor caso tenha duvida* |
@@ -206,8 +160,8 @@ não devem ser digitados na declaração).
 Exemplo de declaração de variáveis:
 
 ```c#
-string nome;
-int idade;
+nome = ";
+idade =" ";
 ```
 
 Neste caso estamos declarando duma variável chamada  **idade** do tipo inteiro e uma
@@ -216,12 +170,12 @@ outra variável chamada **nome** do tipo string.
 ### Atribuição de valores para as variáveis
 
 ```c#
-byte a = 45;
-char t = ‘T’; 
-int valor = 200;
-float x = 98.80; 
-char sexo = ‘F’;
-int dia; // variável declarada e não inicializada
+a = 45;
+t = ‘T’; 
+valor = 200;
+x = 98.80; 
+sexo = ‘F’;
+dia; // variável declarada e não inicializada
 dia = 20; // variável atribuída agora
 ```
 
@@ -270,24 +224,14 @@ alterados durante a execução do programa. Para isso, utilizamos a palavra rese
 Exemplos de declaração de constantes:
 
 ```c#
-using System;
 
-static class Constants
-{
-    public const double Pi = 3.14159;
-    public const int SpeedOfLight = 300000; // km per sec.
-}
+    const Pi = 3.14159;
+    const SpeedOfLight = 300000; // km per sec.
+    var radius = 5.3;
+    var area = Constants.Pi * (radius * radius);
+    var secsFromSun = 149476000 / Constants.SpeedOfLight; // in km
+    Console.log(secsFromSun);
 
-class Program
-{
-    static void Main()
-    {
-        double radius = 5.3;
-        double area = Constants.Pi * (radius * radius);
-        int secsFromSun = 149476000 / Constants.SpeedOfLight; // in km
-        Console.WriteLine(secsFromSun);
-    }
-}
 ```
 
 Por convenção, usamos letras maiúsculas para declarar constantes e assim disngui-las
@@ -314,11 +258,11 @@ Exemplos:
 Operadores Aritméticos
 
 ```c#
-int umMaisUm = 1 + 1; // umMaisUm = 2
-int tresVezesDois = 3 * 2; // tresVezesDois = 6
-int quatroDivididoPor2 = 4 / 2; // quatroDivididoPor2 = 2
-int seisModuloCinco = 6 % 5; // seisModuloCinco = 1
-int x = 7;
+var umMaisUm = 1 + 1; // umMaisUm = 2
+var tresVezesDois = 3 * 2; // tresVezesDois = 6
+var quatroDivididoPor2 = 4 / 2; // quatroDivididoPor2 = 2
+var seisModuloCinco = 6 % 5; // seisModuloCinco = 1
+var x = 7;
 
 
 x = x + 1 * 2; // x = 9 7 x = x - 3; // x = 6 8
@@ -339,7 +283,7 @@ módulo cinco.
 Operadores de Atribuição
 
 ```c#
-int valor = 1; // valor = 1
+var valor = 1; // valor = 1
 
 valor += 2; // valor = 3
 
@@ -355,38 +299,38 @@ valor %= 3; // valor = 1
 Operadores Relacionais
 
 ```c#
-int valor = 2;
+var valor = 2;
 
-boolean t = false;
+var boolean t = false;
 ```
 
 ```c#
-t = (valor == 2); // t = true
+var t = (valor == 2); // t = true
 
-t = (valor != 2); // t = false
+var t = (valor != 2); // t = false
 
-t = (valor < 2); // t = false
+var t = (valor < 2); // t = false
 
-t = (valor <= 2); // t = true
+var t = (valor <= 2); // t = true
 
-t = (valor > 1); // t = true
+var t = (valor > 1); // t = true
 
-t = (valor >= 1); // t = true
+var t = (valor >= 1); // t = true
 ```
 
 Operadores Lógicos
 
 ```c#
-int valor = 30;
-boolean teste = false;
+var valor = 30;
+var teste = false;
 ```
 
 ```c#
-teste = valor < 40 && valor > 20; // teste = true
-teste = valor < 40 && valor > 30; // teste = false
-teste = valor > 30 || valor > 20; // teste = true
-teste = valor > 30 || valor < 20; // teste = false
-teste = valor < 50 && valor == 30; // teste = true
+var teste = valor < 40 && valor > 20; // teste = true
+var teste = valor < 40 && valor > 30; // teste = false
+var teste = valor > 30 || valor > 20; // teste = true
+varteste = valor > 30 || valor < 20; // teste = false
+varteste = valor < 50 && valor == 30; // teste = true
 ```
 
 | <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes nas diferença dos operadores lógicos ;* |
@@ -421,13 +365,13 @@ Vejamos o exemplo abaixo para identificar essas duas cláusulas:
 string nome = Console.ReadLine();
 ```
 ```
-Console.WriteLine("Nome: ");
-string nome = Console.ReadLine();
-Console.WriteLine("Peso: ");
-int peso = Console.ReadLine();
-Console.WriteLine("Altura: ");
-string altura = Console.ReadLine();
-double imc = peso / (altura * altura);
+console.log("Nome: ");
+var nome = console.log();
+console.log("Peso: ");
+var peso = Console.ReadLine();
+console.log("Altura: ");
+var altura = console.log();
+var imc = peso / (altura * altura);
 ```
 
 Em relação a este exemplo caso o seu IMC for maior ou igual a 40 irá aparecer duas
@@ -444,52 +388,52 @@ iremos ulizar os operadores lógicos, como no exemplo abaixo:
 
 ```c#
 if (sexo == 'F' && imc < 19.1) {
-Console.WriteLine("Abaixo do peso."); 
+console.log("Abaixo do peso."); 
 }
 else if (sexo == 'F' && imc <= 25.8) {
-Console.WriteLine("Peso ideal."); 
+console.log("Peso ideal."); 
 }
 else if (sexo == 'F' && imc <= 27.3) {
-Console.WriteLine("Um pouco acima do peso."); 
+console.log("Um pouco acima do peso."); 
 }
 else if (sexo == 'F' && imc <= 32.3) {
-Console.WriteLine("Acima do peso ideal.");
+console.log("Acima do peso ideal.");
 }
 else if (sexo == 'F') { 
-Console.WriteLine("Obeso.");
+console.log("Obeso.");
 }
 else if (sexo == 'M' && imc < 20.7) {
-Console.WriteLine("Abaixo do peso.");
+console.log("Abaixo do peso.");
 }
 else if (sexo == 'M' && imc <= 26.4) {
-Console.WriteLine("Peso ideal.");
+console.log("Peso ideal.");
 }
 else if (sexo == 'M' && imc <= 27.8) {
-Console.WriteLine("Um pouco acima do peso.");
+console.log("Um pouco acima do peso.");
 }
 else if (sexo == 'M' && imc <= 31.1) {
-Console.WriteLine("Acima do peso ideal."); 
+console.log("Acima do peso ideal."); 
 }
 ```
 ```c#
 if (imc < 18.5)
-Console.WriteLine("Abaixo do peso ideal.");
+console.log("Abaixo do peso ideal.");
 else if (imc < 25)
-Console.WriteLine("Peso ideal.");
+console.log("Peso ideal.");
 else if (imc < 30)
-Console.WriteLine("Acima do peso.");
+console.log("Acima do peso.");
 else if (imc < 35)
-Console.WriteLine("Obesidade grau I.");
+console.log("Obesidade grau I.");
 else if (imc < 40)
-Console.WriteLine("Obesidade grau II.");
+console.log("Obesidade grau II.");
 else
-Console.WriteLine("Obesidade grau III.");
-Console.WriteLine("Muito cuidado com seu peso.");
+console.log("Obesidade grau III.");
+console.log("Muito cuidado com seu peso.");
 ```
 
 ```c#
 else if (sexo == 'M') {
-Console.WriteLine("Obeso.");
+console.log("Obeso.");
 }
 ```
 
@@ -550,40 +494,40 @@ Vamos verificar um exemplo para demonstrar a execução desse laço:
 
 ```c#
 switch (i) {
-case '1': Console.WriteLine( "i contem um 1");
-case '2': Console.WriteLine( "i contem um 2");
-case '3': Console.WriteLine( "i contem um 3");
+case '1': console.log( "i contem um 1");
+case '2': console.log( "i contem um 2");
+case '3': console.log( "i contem um 3");
 }
 ```
 Exemplo usando o break:
 
 ```c#
-int dia;
-Console.WriteLine("Digite um numero para encontrar o seu dia: ");
+var dia;
+console.log("Digite um numero para encontrar o seu dia: ");
 dia =  Console.ReadLine();
 switch (dia) {
 case 1:
- Console.WriteLine("Domingo");
+ console.log("Domingo");
 break;
 case 2:
- Console.WriteLine("Segunda");
+ console.log("Segunda");
 break;
 case 3:
- Console.WriteLine("Terça");
+ console.log("Terça");
 break;
 case 4:
- Console.WriteLine("Quarta");
+ console.log("Quarta");
 break;
 case 5:
- Console.WriteLine("Quinta");
+ console.log("Quinta");
 break;
 case 6:
- Console.WriteLine("Sexta");
+ console.log("Sexta");
 break;
- Console.WriteLine("Sabado");
+ console.log("Sabado");
 break;
 default:
-	Console.WriteLine("Número digitado é inválido!!!");
+	console.log("Número digitado é inválido!!!");
 break;
 	}
 }
@@ -622,7 +566,7 @@ Programa que soma os n primeiros números que entraram como argumento.
 ```c#
 for (int i = 0; i < 3; i++)
 {
-    Console.Write(i);
+    console.log(i);
 }
 // Output:
 // 012soma+=i;
@@ -646,7 +590,7 @@ O exemplo abaixo imprime todos os números em um intervalo informado pelo usuár
 int n = 0;
 while (n < 5)
 {
-    Console.Write(n);
+    console.log(n);
     n++;
 }
 // Output:
@@ -667,7 +611,7 @@ Vejamos o exemplo abaixo:
 int n = 0;
 do
 {
-    Console.Write(n);
+    console.log(n);
     n++;
 } while (n < 5);
 // Output:
@@ -710,55 +654,55 @@ gavetas. E cada gaveta possui um rótulo com um número de identificação.
 
 Para declarar um array devemos seguir a seguinte sintaxe:
 
-**tipo[] nome_do_array = new tipo[numero_de_elementos];**
+**nome_do_array = [numero_de_elementos];**
 Ou:
-**tipo[] nome_do_array = { valor1, valor2, ...,valorx};**
+**nome_do_array = { valor1, valor2, ...,valorx};**
 
 Por exemplo, se em uma sala de aula ver 20 alunos e você quiser declarar 20 variáveis
 do tipo float usando array, ficaria assim:
 
-**float[] nota = new int[ 20 ];**
-**float[] nota = { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 90. 1 , 10. 02 ,- 11 , 12. 9 , 13. 7 , 14. 5 , 15. 7 , 16. 0 , 17. 5 , 19. 3 , 20. 2 };**
+**nota = [ 20 ];**
+**nota = { 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 90. 1 , 10. 02 ,- 11 , 12. 9 , 13. 7 , 14. 5 , 15. 7 , 16. 0 , 17. 5 , 19. 3 , 20. 2 };**
 
 E o nome dos alunos, armazenaríamos em strings:
-**string[] nome = new string[ 20 ];**
+**nome = [ 20 ];**
 
 Se quisermos acessar os elementos de um array podemos fazer o seguinte:
 
 ```c#
-string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-Console.WriteLine(cars[0]);
+var cars = ["Volvo", "BMW", "Ford", "Mazda"];
+console.log(cars[0]);
 // Outputs Volvo
 ```
 E neste mesmo exemplo se quisermos alterar um elemento do array basta fazer o
 seguinte:
 
 ```c#
-string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+var cars = ["Volvo", "BMW", "Ford", "Mazda"];
 cars[0] = "Opel";
-Console.WriteLine(cars[0]);
+console.log(cars[0]);
 ```
 Se quisermos saber o tamanho de um array iremos ulizar a propriedade length ( ).
 
 ```c#
-int[] arrayUm ={12, 3, 5, 68, 9, 6, 73, 44, 456, 65, 321} ;
-int[] arrayDois = {43, 42, 4, 8, 55, 21, 2, 45} ;
+arrayUm =[12, 3, 5, 68, 9, 6, 73, 44, 456, 65, 321] ;
+arrayDois = [43, 42, 4, 8, 55, 21, 2, 45] ;
 
 	if (arrayDois.length >8) {
-		Console.WriteLine("Tamanho do ArrayDois - Maior que 8!");
+		console.log("Tamanho do ArrayDois - Maior que 8!");
 	} else {
-		Console.WriteLine("Tamanho do ArrayDois - Menor que 8!"``);
+		console.log("Tamanho do ArrayDois - Menor que 8!"``);
 	}
-	Console.WriteLine("\nTamanho do ArrayUm = "+arrayUm.length);
+	console.log("\nTamanho do ArrayUm = "+arrayUm.length);
 	}
 ```
 Para percorrer um array podemos ulizar um for-each:
 
 ```c#
-String[] cars = {"Volvo", "", "Ford", "Mazda"};
-for (String i : cars) {
-Console.WriteLine(i);
-}
+cars = ["Volvo", "", "Ford", "Mazda"];
+cars.forEach(element => {
+    console.log(elements)
+});
 ```
 
 O exemplo acima pode ser lido assim: para cada string elemento (chamado i - como
@@ -777,50 +721,13 @@ variável numero é o array, o indiceA é a linha e o indiceB é identificado co
 fazendo uma identificação de cada elemento no array por número de linha e coluna.
 
 ```c#
-// Two-dimensional array.
-int[,] array2D = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
-// The same array with dimensions specified.
-int[,] array2Da = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
-// A similar array with string elements.
-string[,] array2Db = new string[3, 2] { { "one", "two" }, { "three", "four" },
-                                        { "five", "six" } };
+const mat = [ 
+	[1, 2, 3], 
+	[4, 5, 6], 
+	[7, 8, 9] 
+]; 
 
-// Three-dimensional array.
-int[,,] array3D = new int[,,] { { { 1, 2, 3 }, { 4, 5, 6 } },
-                                 { { 7, 8, 9 }, { 10, 11, 12 } } };
-// The same array with dimensions specified.
-int[,,] array3Da = new int[2, 2, 3] { { { 1, 2, 3 }, { 4, 5, 6 } },
-                                       { { 7, 8, 9 }, { 10, 11, 12 } } };
-
-// Accessing array elements.
-System.Console.WriteLine(array2D[0, 0]);
-System.Console.WriteLine(array2D[0, 1]);
-System.Console.WriteLine(array2D[1, 0]);
-System.Console.WriteLine(array2D[1, 1]);
-System.Console.WriteLine(array2D[3, 0]);
-System.Console.WriteLine(array2Db[1, 0]);
-System.Console.WriteLine(array3Da[1, 0, 1]);
-System.Console.WriteLine(array3D[1, 1, 2]);
-
-// Getting the total count of elements or the length of a given dimension.
-var allLength = array3D.Length;
-var total = 1;
-for (int i = 0; i < array3D.Rank; i++)
-{
-    total *= array3D.GetLength(i);
-}
-System.Console.WriteLine("{0} equals {1}", allLength, total);
-
-// Output:
-// 1
-// 2
-// 3
-// 4
-// 7
-// three
-// 8
-// 12
-// 12 equals 12
+console.log(mat[0][0]);
 ```
 ## Funções em C#
 
