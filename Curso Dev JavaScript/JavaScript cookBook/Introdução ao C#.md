@@ -1,22 +1,20 @@
 # Introdução ao JavaScript
 
-O C# (pronuncia-se "See Sharp") é uma linguagem de programação moderna desenvolvida pela Microsoft, orientada a objeto e fortemente digitada. O C# permite que os desenvolvedores criem muitos tipos de aplicativos seguros e robustos que são executados no .NET. O C# tem suas raízes na família de linguagens C e os programadores em C, C++, Java e JavaScript a reconhecerão imediatamente. [do C#.](https://docs.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/tutorials/)
+JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web, mas usada também em vários outros ambientes sem browser, tais como node.js,  Apache CouchDB e Adobe Acrobat. [do C#.]([https://docs.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/tutorials/](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript))
 
 ## O que é o JavaScript
 
-O C# é uma linguagem de programação orientada a objeto* orientada a componentes. O C# fornece constructos de linguagem para dar suporte direto a esses conceitos, tornando o C# uma linguagem natural na qual criar e usar componentes de software. Desde sua origem, o C# adicionou recursos para dar suporte a novas cargas de trabalho e práticas de design de software emergentes. 
+O JavaScript é uma linguagem baseada em protótipos, multi-paradigma e dinâmica, suportando estilos de orientação a objetos, imperativos e declarativos (como por exemplo a programação funcional). Saiba mais sobre o JavaScript.
 
 
 
 
-## Ambiente de Trabalho C# Visual Studio Code
+## Ambiente de Trabalho JavaScript Visual Studio Code
 
 
-**O Microsoft Visual Studio** é um [ambiente de desenvolvimento integrado](https://en.wikipedia.org/wiki/Integrated_development_environment "Ambiente de desenvolvimento integrado") (IDE) da [Microsoft](https://en.wikipedia.org/wiki/Microsoft "Microsoft") . Ele é usado para desenvolver [programas de computador](https://en.wikipedia.org/wiki/Computer_program "Programa de computador") , bem como [sites](https://en.wikipedia.org/wiki/Web_site "Web site") , [aplicativos da](https://en.wikipedia.org/wiki/Web_app "Aplicativo web") [web](https://en.wikipedia.org/wiki/Web_service "serviço de internet") , [serviços da web](https://en.wikipedia.org/wiki/Web_service "Web service") e [aplicativos móveis](https://en.wikipedia.org/wiki/Mobile_app "Mobile app") . O Visual Studio usa plataformas de desenvolvimento de software da Microsoft, como [API do](https://en.wikipedia.org/wiki/Windows_API "API do Windows") [Windows](https://en.wikipedia.org/wiki/Windows_Forms "Formulários do Windows") , [Windows Forms](https://en.wikipedia.org/wiki/Windows_Forms "Windows Forms") , [Windows Presentation Foundation](https://en.wikipedia.org/wiki/Windows_Presentation_Foundation "Windows Presentation Foundation") , [Windows Store](https://en.wikipedia.org/wiki/Windows_Store "Loja do Windows") e [Microsoft Silverlight](https://en.wikipedia.org/wiki/Microsoft_Silverlight "Microsoft Silverlight") . Pode produzir tanto [código nativo](https://en.wikipedia.org/wiki/Machine_code "Código da máquina") e [código gerenciado](https://en.wikipedia.org/wiki/Managed_code "Código gerenciado") .
+**O Microsoft Visual Studio Code** é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código. Ele é customizável, permitindo que os usuários possam mudar o tema do editor, teclas de atalho e preferências. Ele é um software livre e de código aberto,[4][5] apesar do download oficial estar sob uma licença proprietária.[3]
 
-O Visual Studio inclui um [editor de código](https://en.wikipedia.org/wiki/Code_editor "Editor de código") compatível com [IntelliSense](https://en.wikipedia.org/wiki/IntelliSense "IntelliSense") (o componente de [conclusão de código](https://en.wikipedia.org/wiki/Code_completion "Conclusão do código") ), bem como [refatoração de código](https://en.wikipedia.org/wiki/Code_refactoring "Refatoração de código") . O depurador integrado funciona como um depurador de nível de origem e um depurador de nível de máquina. Outras ferramentas [internas](https://en.wikipedia.org/wiki/Profiling_(computer_programming) "Profiling (programação de computador)") incluem um [criador de perfil de código](https://en.wikipedia.org/wiki/Profiling_(computer_programming) "Profiling (computer programming)") , designer para criar aplicativos [GUI](https://en.wikipedia.org/wiki/GUI "GUI") , [web designer](https://en.wikipedia.org/wiki/Web_designer "Web designer") , designer de [classe](https://en.wikipedia.org/wiki/Class_(computing) "Classe (computação)") e designer de [esquema de banco de dados](https://en.wikipedia.org/wiki/Database_schema "Esquema de banco de dados") . Ele aceita plug-ins que expandem a funcionalidade em quase todos os níveis - incluindo a adição de suporte para sistemas de [controle de origem](https://en.wikipedia.org/wiki/Source_control "Fonte de controle") (como [Subversion](https://en.wikipedia.org/wiki/Subversion_(software) "Subversão (software)") e [Git](https://en.wikipedia.org/wiki/Git "vai")) e adicionar novos conjuntos de ferramentas como editores e designers visuais para [linguagens](https://en.wikipedia.org/wiki/Domain-specific_language "Idioma específico do domínio") ou conjuntos de ferramentas [específicos de domínio](https://en.wikipedia.org/wiki/Domain-specific_language "Domain-specific language") para outros aspectos do [ciclo de vida de desenvolvimento de software](https://en.wikipedia.org/wiki/Software_development_lifecycle "Ciclo de vida de desenvolvimento de software") (como o cliente [Azure DevOps](https://en.wikipedia.org/wiki/Azure_DevOps_Server "Servidor Azure DevOps") : Team Explorer).
-
-O Visual Studio oferece suporte a 36 [linguagens de programação](https://en.wikipedia.org/wiki/Programming_language "Linguagem de programação") diferentes e permite que o editor de código e o depurador ofereçam suporte (em graus variados) a praticamente qualquer linguagem de programação, desde que exista um serviço específico de linguagem. As linguagens incorporadas incluem [C](https://en.wikipedia.org/wiki/C_(programming_language) "C (linguagem de programação)") , [[9]](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#cite_note-9)  [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++") , [C++/CLI](https://en.wikipedia.org/wiki/C%2B%2B/CLI "C++/CLI") , [Visual Basic .NET](https://en.wikipedia.org/wiki/Visual_Basic_.NET "Visual Basic .NET") , [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language) "C Sharp (linguagem de programação)") , [F#](https://en.wikipedia.org/wiki/F_Sharp_(programming_language) "F Sharp (linguagem de programação)") , [[10]](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#cite_note-10)  [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") , [TypeScript](https://en.wikipedia.org/wiki/TypeScript "TypeScript") , [XML](https://en.wikipedia.org/wiki/XML "XML") , [XSLT](https://en.wikipedia.org/wiki/XSLT "XSLT") , [HTML](https://en.wikipedia.org/wiki/HTML "HTML") e [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Folhas de estilo em cascata") . Suporte para outras linguagens como [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python (linguagem de programação)") , [[11]](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#cite_note-11)  [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language) "Ruby (linguagem de programação)") , [Node.js](https://en.wikipedia.org/wiki/Node.js "Node.js"), e [M,](https://en.wikipedia.org/wiki/MUMPS "CAXUMBA") entre outros, está disponível por meio de [plug-ins](https://en.wikipedia.org/wiki/Plug-in_(computing) "Plug-in (computação)") . [Java](https://en.wikipedia.org/wiki/Java_(programming_language) "Java (linguagem de programação)") (e [J#](https://en.wikipedia.org/wiki/J_Sharp "J Sustenido") ) eram suportados no passado.
+O Visual Studio Code é baseado no Electron, um framework que é usado para desenvolver aplicativos Node.js para o desktop rodando no motor de layout Blink. Apesar de usar o Electron como framework,[6] o software não usa o Atom e em seu lugar emprega o mesmo componente editor (apelidado "Monaco") usado no Visual Studio Team Services (anteriormente chamado de Visual Studio Online)
 
 ## Instalando a IDE Visual Studios Code
 
@@ -151,7 +149,7 @@ var sign = prompt('Você está se sentindo com sorte', 'certamente'); // abrir u
 
 ### Variável
 
-Para criar um idenficador (nome da variável) em C#, precisamos seguir algumas
+Para criar um idenficador (nome da variável) em JavaScript, precisamos seguir algumas
 regras, listadas a seguir:
 
 >  - Deve conter apenas letras, _ (underline), $ ou os números de 0 a 9.
@@ -159,7 +157,7 @@ regras, listadas a seguir:
 >   - Deve iniciar com uma letra minúscula (boa práca).   Não pode    conter espaços Não podemos usar palavras-chave da linguagem .
 >    - O nome deve ser único dentro de um escopo
 
-Além disso, o C# é case sensive, o que significa que os nomes de variáveis
+Além disso, o JavaScript é case sensive, o que significa que os nomes de variáveis
 diferenciam maiúsculas de minúsculas.
 
 Sintaxe:
@@ -170,7 +168,7 @@ não devem ser digitados na declaração).
 
 Exemplo de declaração de variáveis:
 
-```c#
+```javaScript
 nome = ";
 idade =" ";
 ```
@@ -180,7 +178,7 @@ outra variável chamada **nome** do tipo string.
 
 ### Atribuição de valores para as variáveis
 
-```c#
+```javaScript
 a = 45;
 t = ‘T’; 
 valor = 200;
@@ -195,7 +193,7 @@ dia = 20; // variável atribuída agora
 
 ### Categorias de Variáveis
 
-Existem três categorias de variáveis que podem ser declaradas em C# :
+Existem três categorias de variáveis que podem ser declaradas em javaScript :
 
 
 - Locais
@@ -234,7 +232,7 @@ alterados durante a execução do programa. Para isso, utilizamos a palavra rese
 
 Exemplos de declaração de constantes:
 
-```c#
+```javaScript
 
     const Pi = 3.14159;
     const SpeedOfLight = 300000; // km per sec.
@@ -251,10 +249,10 @@ das variáveis.
 ## Operadores
 
 Para manipular os valores das variáveis de um programa, devemos ulizar os operadores
-oferecidos pela linguagem de programação adotada. A linguagem C# possui diversos
+oferecidos pela linguagem de programação adotada. A linguagem javaScript possui diversos
 operadores e os principais são categorizados da seguinte forma:
 
-```c#
+```javaScript
 Aritméco(+, -, *, /, %) 
 
 Atribuição(=, +=, -=, *=, /=, %=)
@@ -268,7 +266,7 @@ Exemplos:
 
 Operadores Aritméticos
 
-```c#
+```javaScript
 var umMaisUm = 1 + 1; // umMaisUm = 2
 var tresVezesDois = 3 * 2; // tresVezesDois = 6
 var quatroDivididoPor2 = 4 / 2; // quatroDivididoPor2 = 2
@@ -293,7 +291,7 @@ módulo cinco.
 
 Operadores de Atribuição
 
-```c#
+```javaScript
 var valor = 1; // valor = 1
 
 valor += 2; // valor = 3
@@ -309,13 +307,13 @@ valor %= 3; // valor = 1
 
 Operadores Relacionais
 
-```c#
+```javaScript
 var valor = 2;
 
 var boolean t = false;
 ```
 
-```c#
+```javaScript
 var t = (valor == 2); // t = true
 
 var t = (valor != 2); // t = false
@@ -331,12 +329,12 @@ var t = (valor >= 1); // t = true
 
 Operadores Lógicos
 
-```c#
+```javaScript
 var valor = 30;
 var teste = false;
 ```
 
-```c#
+```javaScript
 var teste = valor < 40 && valor > 20; // teste = true
 var teste = valor < 40 && valor > 30; // teste = false
 var teste = valor > 30 || valor > 20; // teste = true
@@ -350,19 +348,19 @@ varteste = valor < 50 && valor == 30; // teste = true
 
 ### Palavras reservadas
 
-O C# faz uso de algumas palavras que não podem ser utilizadas, por exemplo, para
+O javaScript faz uso de algumas palavras que não podem ser utilizadas, por exemplo, para
 criar nome de variáveis, classes, métodos e etc... A seguir listamos algumas palavras
 reservadas disponível no link abaixo:
 
-https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/
+https://www.w3schools.com/js/js_reserved.asp
 
 ### Estruturas de Controle if ( )...else
 
 Quando queremos tomar uma decisão em nosso código, ou seja, definir outras opções
-em C# utilizamos o comando if (se).
-A sintaxe do if no C# é a seguinte
+em javaScript utilizamos o comando if (se).
+A sintaxe do if no javaScript é a seguinte
 
-```c#
+```javaScript
 if (condicaoBooleana)
 { codigo; }
 ```
@@ -372,7 +370,7 @@ Além da utilização do if, nós poderemos utilizar a cláusula else (senão) p
 comportamento que deve ser executado no caso da expressão booleana ser falsa.
 Vejamos o exemplo abaixo para identificar essas duas cláusulas:
 
-```c#
+```javaScript
 string nome = Console.ReadLine();
 ```
 ```
@@ -397,7 +395,7 @@ torna necessário.
 Nesse mesmo exemplo se quisermos colocar mais de uma opção dentro da condição
 iremos ulizar os operadores lógicos, como no exemplo abaixo:
 
-```c#
+```javaScript
 if (sexo == 'F' && imc < 19.1) {
 console.log("Abaixo do peso."); 
 }
@@ -426,7 +424,7 @@ else if (sexo == 'M' && imc <= 31.1) {
 console.log("Acima do peso ideal."); 
 }
 ```
-```c#
+```javaScript
 if (imc < 18.5)
 console.log("Abaixo do peso ideal.");
 else if (imc < 25)
@@ -442,14 +440,14 @@ console.log("Obesidade grau III.");
 console.log("Muito cuidado com seu peso.");
 ```
 
-```c#
+```javaScript
 else if (sexo == 'M') {
 console.log("Obeso.");
 }
 ```
 
 
-```c#
+```javaScript
 teste = valor < 40 && valor > 20; // teste = true
 teste = valor < 40 && valor > 30; // teste = false
 teste = valor > 30 || valor > 20; // teste = true
@@ -503,7 +501,7 @@ opções e sim que saia diretamente do ‘Switch’, por isso, dependendo do que
 fazer, você colocará ou não.
 Vamos verificar um exemplo para demonstrar a execução desse laço:
 
-```c#
+```javaScript
 switch (i) {
 case '1': console.log( "i contem um 1");
 case '2': console.log( "i contem um 2");
@@ -512,7 +510,7 @@ case '3': console.log( "i contem um 3");
 ```
 Exemplo usando o break:
 
-```c#
+```javaScript
 var dia;
 console.log("Digite um numero para encontrar o seu dia: ");
 dia =  pront();
@@ -560,7 +558,7 @@ _while_ e _do – while_
 
 ### Estrutura for ( )
 
-```c#
+```javaScript
 for (inicialização; condição de execução; Incremento/decremento)
 Bloco de Instruções;
 ```
@@ -574,7 +572,7 @@ também) será alterada a cada iteração do for.
 Exemplo:
 Programa que soma os n primeiros números que entraram como argumento.
 
-```c#
+```javaScript
 for (int i = 0; i < 3; i++)
 {
     console.log(i);
@@ -592,12 +590,12 @@ for (int i = 0; i < 3; i++)
 
 ### Estrutura while ( )
 
-O while é uma das formas de fazer loops (laços) em C# . Loops são usados para
+O while é uma das formas de fazer loops (laços) em javaScript . Loops são usados para
 executar um bloco de código diversas vezes, dependendo de uma condição ser
 verdadeira.
 O exemplo abaixo imprime todos os números em um intervalo informado pelo usuário.
 
-```c#
+```javaScript
 int n = 0;
 while (n < 5)
 {
@@ -618,7 +616,7 @@ A declaração do-while é similar ao while. Ele executa a instrução pelo meno
 connua executando enquanto a expressão booleana for verdadeira.
 Vejamos o exemplo abaixo:
 
-```c#
+```javaScript
 int n = 0;
 do
 {
@@ -644,7 +642,7 @@ for (int i = 0; i < 10; i++) {
 ```
 
 
-| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar Persistência e atenção aos detalhes quando estivermos codificando em C#* |
+| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar Persistência e atenção aos detalhes quando estivermos codificando em javaScript* |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
 
 
@@ -680,7 +678,7 @@ E o nome dos alunos, armazenaríamos em strings:
 
 Se quisermos acessar os elementos de um array podemos fazer o seguinte:
 
-```c#
+```javaScript
 var cars = ["Volvo", "BMW", "Ford", "Mazda"];
 console.log(cars[0]);
 // Outputs Volvo
@@ -688,14 +686,14 @@ console.log(cars[0]);
 E neste mesmo exemplo se quisermos alterar um elemento do array basta fazer o
 seguinte:
 
-```c#
+```javaScript
 var cars = ["Volvo", "BMW", "Ford", "Mazda"];
 cars[0] = "Opel";
 console.log(cars[0]);
 ```
 Se quisermos saber o tamanho de um array iremos ulizar a propriedade length ( ).
 
-```c#
+```javaScript
 arrayUm =[12, 3, 5, 68, 9, 6, 73, 44, 456, 65, 321] ;
 arrayDois = [43, 42, 4, 8, 55, 21, 2, 45] ;
 
@@ -709,7 +707,7 @@ arrayDois = [43, 42, 4, 8, 55, 21, 2, 45] ;
 ```
 Para percorrer um array podemos ulizar um for-each:
 
-```c#
+```javaScript
 cars = ["Volvo", "", "Ford", "Mazda"];
 cars.forEach(element => {
     console.log(elements)
@@ -731,7 +729,7 @@ Por exemplo, quando um array é identificação dessa forma “numero [indiceA][
 variável numero é o array, o indiceA é a linha e o indiceB é identificado como a coluna,
 fazendo uma identificação de cada elemento no array por número de linha e coluna.
 
-```c#
+```javaScript
 const mat = [ 
 	[1, 2, 3], 
 	[4, 5, 6], 
@@ -740,7 +738,7 @@ const mat = [
 
 console.log(mat[0][0]);
 ```
-## Funções em C#
+## Funções em javaScript
 
 
 Função é algo que deve ser feito uma ou várias vezes, sempre que for necessário para se
@@ -765,7 +763,7 @@ obter um resultado.
   A seguir podemos visualizar um exemplo de uma função chamada _MostraMenu_ que está
   sendo chamada pelo _main_.
 
-```c#
+```javaScript
     opcao = 0;
 
     do {
@@ -791,7 +789,7 @@ em valores de produtos.
 - Sim, é uma função! O valor com desconto – double;
 
 
-```c#
+```javaScript
 function MostrarMenu(va, pc) {
    double vd = va * (pc / 100); 
    return va - vd;
@@ -813,7 +811,7 @@ no mundo real no mundo virtual.
 
 ### Classes e Objetos
 
-Em C# os programas são escritos em pequenos pedaços separados, chamados de
+Em javaScript os programas são escritos em pequenos pedaços separados, chamados de
 objetos. Objetos são pequenos programas que guardam dentro de si os dados – em
 suma, as variáveis – que precisam para executar suas tarefas. Os objetos também
 trazem em si, como sub-rotinas, as instruções para processar esses dados. As variáveis
@@ -845,12 +843,12 @@ concreto e palpável através da criação de um objeto. Chamamos essa criação
 _instanciação da classe_ , como se estivéssemos usando esse molde (classe) para criar um
 objeto.
 Bem, visto os conceitos fundamentais de orientação à objetos, agora vamos aplicar
-todos esses conceitos na prática utilizando a linguagem de programação C#.
+todos esses conceitos na prática utilizando a linguagem de programação javaScript.
 Colocamos uma classe genérica _Pessoa_ , onde teria que guardar os vários pedaços do seu
 nome, então para isso teríamos que criar alguns atributos para a mesma, por exemplo:
 
 
-```c#
+```javaScript
 class Pessoa {
 	private  primeiroNome: string;
 	private  ultimoNome: string;
@@ -865,7 +863,7 @@ poderá acessá-lo e manipular o mesmo.
 Mas não basta criar os atributos, temos que também dar algumas funcionalidades para
 os mesmos, para isso criamos um método para retornar o nome completo por exemplo.
 
-```c#
+```javaScript
 class Pessoa {
 	private  primeiroNome: string;
 	private  ultimoNome: string;
@@ -897,7 +895,7 @@ atribuição é =, e a concatenação de string é feita através do operador +.
 ponto-e-vírgula sinaliza o fim deste comando. Abaixo, temos o comando return. Quando
 ele é invocado, o método termina e o valor que está à sua frente (no caso, o valor
 referenciado pela variável nomeCompleto) é retornado.
-Até agora ainda não construímos nenhum objeto, para isto C# tem uma ferramenta
+Até agora ainda não construímos nenhum objeto, para isto javaScript tem uma ferramenta
 
 
 chamada _construtor_. Geralmente os construtores tem o mesmo nome da classe. Esse
@@ -908,7 +906,7 @@ Pessoa pessoa = new Pessoa();
 ```
 Agora vamos criar uma pessoa chamada Francisco Pinho Nunes.
 
-```c#
+```javaScript
 
 Pessoa pessoa = new Pessoa();
 pessoa.primeiroNome = “Francisco”;
@@ -921,7 +919,7 @@ No entanto, isto não é possível porque os atributos são privados. Apenas os 
 classe _Pessoa_ podem acessá-los. Isso pode ser solucionado de várias maneiras, e uma
 das mais elegantes é criando o nosso próprio construtor, como abaixo:
 
-```c#
+```javaScript
 function Pessoa(primeiro, meio, ultimo ) {
     primeiroNome = primeiro;
     ultimoNome = ultimo;
@@ -936,8 +934,6 @@ retornam objetos; quem faz isso é a palavra reservada _new_. O construtor apena
 executa algum procedimento sobre o objeto criado pelo comando _new_. Este construtor,
 no caso, recebe os nomes como parâmetros e os atribui aos atributos.
 
-Agora, podemos trocar as quatro primeiras linhas do método _main()_ inválido por apenas
-a seguinte:
 
 ```
 Pessoa pessoa = new Pessoa( "Francisco", "Pinho", "Nunes" );
@@ -1036,7 +1032,7 @@ do programa, já que a restrição de acesso nos permite idenficar quem consegue
 modificá-la.
 Exemplo:
 
-```c#
+```javaScript
 class Carro {
     
     private velocidade: number;
@@ -1103,7 +1099,7 @@ Por exemplo, poderíamos ter uma classe Animal que representasse animais em gera
 as atividades que todos eles executam. Uma dessas atividades é comer, e nossa classe
 poderia ser como a abaixo.
 
-```c#
+```javaScript
 class Animal {
 
     comer(alimento:string):void {
@@ -1116,13 +1112,13 @@ Uma classe de mamíferos _estenderia_ a classe de animais, porque mamíferos pod
 coisas que outros animais não podem – por exemplo, gerar leite. Uma classe Mamifero
 estenderia a classe _Animal_ usando a sinal **:** em sua declaração:
 
-```c#
+```javaScript
 class Mamifero implements Animal {
 }
 ```
 Um novo método, _lactar()_ , também poderia ser adicionado:
 
-```c#
+```javaScript
 lactar():string {
 return "leite" ;
 }
@@ -1131,7 +1127,7 @@ Como mamíferos são animais, também precisam do método _comer()_ , e aí entr
 vantagens da herança: como a classe Mamífero estende a classe Animal, ela _herda_ todos
 os métodos de Animal, então não é preciso reescrevê-los.
 
-```c#
+```javaScript
 class AnimaisAcao {
 
 		Animal animal = new Animal();
@@ -1152,7 +1148,7 @@ A figura abaixo mostra a impressão deste programa:
 
 
 
-| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes no sinal de : para herança em C#* |
+| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes no sinal de : para herança em javaScript |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
 
 
@@ -1173,7 +1169,7 @@ Abaixo é possível ver um exemplo de uma interface chamada FiguraGeometrica_ co
 assinaturas de métodos que virão a ser implementados pelas classes referentes às
 figuras geométricas.
 
-```c#
+```javaScript
 interface FiguraGeometrica
     {
         
@@ -1193,7 +1189,7 @@ Sintaxe:
 
 Onde:
 
-```c#
+```javaScript
 nome_classe – Nome da classe a ser implementada.
 nome_Interface – Nome da interface a se implementada pela classe.
 ```
@@ -1202,7 +1198,7 @@ chamada Quadrado e outra Triangulo.
 
 Classe Quadrado
 
-```c#
+```javaScript
 class Quadrado implements FiguraGeometrica {
 	private lado:number;
 
@@ -1234,7 +1230,7 @@ class Quadrado implements FiguraGeometrica {
 ```
 Classe Triangulo
 
-```c#
+```javaScript
 class Triangulo implements FiguraGeometrica {
 
 	private base:number;
@@ -1302,7 +1298,7 @@ public getPerimetro():number {
 	}
 }
 ```
-| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes no sinal de : para implementar interfaces em C#* |
+| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes no sinal de : para implementar interfaces em javaScript* |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
 
 
@@ -1324,7 +1320,7 @@ Se você tem uma _class Animal_ sabe que todo animal come, sendo que Cães por e
 comem ração e Tigres carne. Você pode chamar o método comer nessas 2 classes
 mesmo sabendo que elas se comportam diferentemente.
 
-```c#
+```javaScript
 class Animal {
 	public comer():void {
 		console.log( "Animal Comendo..." );
@@ -1346,7 +1342,7 @@ class Tigre implements Animal {
 
 No caso a sua chamado de método polimórfico ficaria assim:
 
-```c#
+```javaScript
 class Test {
 	public  fazerAnimalComer:void( animal:Animal ) {
 	animal.comer();
@@ -1373,7 +1369,7 @@ genérico (Animal) ou são filhos do mais genérico.
 ## Exceptions
 
 O uso de exceções permite separar a detecção da ocorrência de uma situação
-excepcional do seu tratamento, ao se programar um método em C#.
+excepcional do seu tratamento, ao se programar um método em javaScript.
 Alguns possíveis movos externos para ocorrer uma exceção são:
 
 ```
@@ -1390,7 +1386,7 @@ Dividir um número por zero.
 Tentar manipular um po de dado como se fosse outro.
 Tentar ulizar um método ou classe não existentes.
 ```
-Para tratar as exceções em C# são utilizamos os comandos try e catch.
+Para tratar as exceções em javaScript são utilizamos os comandos try e catch.
 Praticamente, o uso dos blocos try/catch se dá em métodos que envolvem alguma
 manipulação de dados, bem como:
 
@@ -1405,7 +1401,7 @@ Entre outros;
 Exemplo da ulização do bloco try/catch:
 ```
 
-```c#
+```javaScript
 var frase:string = '';
 var novaFrase:string = '';
 
@@ -1436,7 +1432,7 @@ importando o que acontecer dentro do bloco try-catch.
 Não é possível deixar um bloco try-catch-finally sem executar sua parte finally.
 Vejamos um exemplo para este bloco:
 
-```c#
+```javaScript
 let x = prompt();
 try { 
   if(x == "")  throw "is Empty";
@@ -1454,7 +1450,7 @@ console.log("finally");
 
 ## Collections
 
-A coleção em C# é uma estrutura que fornece uma arquitetura para armazenar e
+A coleção em javaScript é uma estrutura que fornece uma arquitetura para armazenar e
 manipular o grupo de objetos.
 
 Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos relacionados. Há duas maneiras de agrupar objetos: criando matrizes de objetos e criando coleções de objetos.
@@ -1468,13 +1464,10 @@ Uma coleção é uma classe, portanto você deve declarar uma instância da clas
 Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace [System.Collections.Generic](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic). Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.
 
 
-### List
+### Array
 
-Os exemplos nesta seção usam a classe genérica [List](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.list-1), que habilita você a trabalhar com uma lista de objetos fortemente tipados.
 
-O exemplo a seguir cria uma lista de cadeias de caracteres e, em seguida, itera nas cadeias de caracteres usando uma instrução [foreach](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement).
-
-```c#
+```javaScript
 var salmons:string[] = []
 salmons.push("chinook");
 salmons.push("coho");
@@ -1494,7 +1487,7 @@ O exemplo a seguir é igual ao exemplo anterior, exceto que um inicializador de 
 
 
 
-```c#
+```javaScript
 // Create a list of strings by using a
 // collection initializer.
 var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
@@ -1509,7 +1502,7 @@ Você pode usar uma instrução [for](https://docs.microsoft.com/pt-br/dotnet/cs
 
 O exemplo a seguir itera nos elementos de uma coleção usando `for` em vez de `foreach`.
 
-```c#
+```javaScript
 // Create a list of strings by using a
 // collection initializer.
 var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
@@ -1523,7 +1516,7 @@ for(let index = 0; index < salmons.length; index++) {
 
 O exemplo a seguir remove um elemento da coleção, especificando o objeto a ser removido.
 
-```c#
+```javaScript
 var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
 
 for( var i = 0; i < salmons.length; i++){ 
@@ -1550,7 +1543,7 @@ fruits.forEach(element => {
 
 A `foreach` instrução não está limitada a esses tipos. Você pode usá-lo com uma instância de qualquer tipo que atenda às seguintes condições:
 
-- Um tipo tem o método público sem `GetEnumerator` parâmetros. A partir do C# 9.0, o `GetEnumerator` método pode ser o método de extensão de um [tipo](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods).
+- Um tipo tem o método público sem `GetEnumerator` parâmetros. A partir do javaScript o `GetEnumerator` método pode ser o método de extensão de um [tipo](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods).
 - O tipo de retorno do `GetEnumerator` método tem a propriedade pública e o método público sem `Current` `MoveNext` parâmetros cujo tipo de retorno é `bool` .
 
 
@@ -1569,7 +1562,7 @@ A classe **String**, do namespace System do **.NET Framework** é muito útil, p
 
 Começando pelos métodos com membros estáticos, vamos falar do **Format**. Este método é uma mão na roda para os desenvolvedores que desejam formatar seus textos sem muitas preocupações, de uma forma rápida e simples.
 
-```c#
+```javaScript
 private void btnExibir_Click(object sender, EventArgs e) {
 	txtTexto.Text = String.Format("Posso incluir o número {0}, {1} e {2} aqui!",
 					10, 20, 30);
@@ -1582,7 +1575,7 @@ O outro método com membro estático que iremos falar é o **IsNullOrEmpty**, mu
 
 **Listagem 2:** Método IsNullOrEmpty em ação
 
-```c#
+```javaScript
 if (String.IsNullOrEmpty(txtTexto.Text))
 {
 	Console.WriteLine("Campo vazio!");
@@ -1597,7 +1590,7 @@ Veja na Listagem 3 um exemplo em que se busca a palavra String e, se achar, é e
 
 **Listagem 3:** Busca por parte de uma string com o método Contains
 
-```c#
+```javaScript
 if (txtTexto.Text.Contains("String"))
 {
 	Console.WriteLine("Você digitou String!");
@@ -1610,7 +1603,7 @@ Com este método conseguimos recuperar partes de uma string, apenas informando o
 
 **Listagem 7:** Recuperando partes de uma string
 
-```c#
+```javaScript
 Console.WriteLine(txtTexto.Text.Substring(6));
 ```
 
@@ -1620,7 +1613,7 @@ Com este método conseguimos converter qualquer string para letras minúsculas. 
 
 **Listagem 8:** Fazendo a string ficar minúscula
 
-```c#
+```javaScript
 Console.WriteLine(txtTexto.Text.ToLower());
 ```
 
@@ -1630,7 +1623,7 @@ Função oposta ao método ToLower, que faz toda a string ficar maiúscula. Veja
 
 **Listagem 9:** Fazendo a string ficar maiúscula
 
-```c#
+```javaScript
 Console.WriteLine(txtTexto.Text.ToUpper());
 ```
 
