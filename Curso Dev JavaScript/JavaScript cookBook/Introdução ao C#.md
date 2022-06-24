@@ -1,21 +1,15 @@
-# Introdução ao C#
+# Introdução ao JavaScript
 
 O C# (pronuncia-se "See Sharp") é uma linguagem de programação moderna desenvolvida pela Microsoft, orientada a objeto e fortemente digitada. O C# permite que os desenvolvedores criem muitos tipos de aplicativos seguros e robustos que são executados no .NET. O C# tem suas raízes na família de linguagens C e os programadores em C, C++, Java e JavaScript a reconhecerão imediatamente. [do C#.](https://docs.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/tutorials/)
 
-## O que é o C#
+## O que é o JavaScript
 
 O C# é uma linguagem de programação orientada a objeto* orientada a componentes. O C# fornece constructos de linguagem para dar suporte direto a esses conceitos, tornando o C# uma linguagem natural na qual criar e usar componentes de software. Desde sua origem, o C# adicionou recursos para dar suporte a novas cargas de trabalho e práticas de design de software emergentes. 
 
-##  Arquitetura do .NET
-
-Programas C# são executados no .NET, um sistema de execução virtual chamado CLR (Common Language Runtime) e um conjunto de bibliotecas de classes. O CLR é a implementação pela Microsoft da CLI (Common Language Infrastructure), um padrão internacional. A CLI é a base para criar ambientes de execução e desenvolvimento nos quais as linguagens e bibliotecas funcionam em conjunto perfeitamente.
-
-O código-fonte escrito em C# é compilado em uma  [IL (linguagem intermediária)](https://docs.microsoft.com/pt-br/dotnet/standard/managed-code)  que está em conformidade com a especificação da CLI. O código IL e os recursos, como bitmaps e cadeias de caracteres, são armazenados em um assembly, normalmente com uma extensão de  _.dll_. Um assembly contém um manifesto que fornece informações sobre os tipos, a versão e a cultura do assembly.
-
-Quando o programa C# é executado, o assembly é carregado no CLR. O CLR executa a compilação JIT (Just-In-Time) para converter o código IL em instruções de computador nativo. O CLR fornece outros serviços relacionados à coleta automática de lixo, tratamento de exceções e gerenciamento de recursos. O código executado pelo CLR às vezes é chamado de "código gerenciado". "Código nãomanagedo", é compilado em uma linguagem de computador nativa que tem como destino uma plataforma específica.
 
 
-## Ambiente de Trabalho C# Visual Studio
+
+## Ambiente de Trabalho C# Visual Studio Code
 
 
 **O Microsoft Visual Studio** é um [ambiente de desenvolvimento integrado](https://en.wikipedia.org/wiki/Integrated_development_environment "Ambiente de desenvolvimento integrado") (IDE) da [Microsoft](https://en.wikipedia.org/wiki/Microsoft "Microsoft") . Ele é usado para desenvolver [programas de computador](https://en.wikipedia.org/wiki/Computer_program "Programa de computador") , bem como [sites](https://en.wikipedia.org/wiki/Web_site "Web site") , [aplicativos da](https://en.wikipedia.org/wiki/Web_app "Aplicativo web") [web](https://en.wikipedia.org/wiki/Web_service "serviço de internet") , [serviços da web](https://en.wikipedia.org/wiki/Web_service "Web service") e [aplicativos móveis](https://en.wikipedia.org/wiki/Mobile_app "Mobile app") . O Visual Studio usa plataformas de desenvolvimento de software da Microsoft, como [API do](https://en.wikipedia.org/wiki/Windows_API "API do Windows") [Windows](https://en.wikipedia.org/wiki/Windows_Forms "Formulários do Windows") , [Windows Forms](https://en.wikipedia.org/wiki/Windows_Forms "Windows Forms") , [Windows Presentation Foundation](https://en.wikipedia.org/wiki/Windows_Presentation_Foundation "Windows Presentation Foundation") , [Windows Store](https://en.wikipedia.org/wiki/Windows_Store "Loja do Windows") e [Microsoft Silverlight](https://en.wikipedia.org/wiki/Microsoft_Silverlight "Microsoft Silverlight") . Pode produzir tanto [código nativo](https://en.wikipedia.org/wiki/Machine_code "Código da máquina") e [código gerenciado](https://en.wikipedia.org/wiki/Managed_code "Código gerenciado") .
@@ -24,7 +18,7 @@ O Visual Studio inclui um [editor de código](https://en.wikipedia.org/wiki/Code
 
 O Visual Studio oferece suporte a 36 [linguagens de programação](https://en.wikipedia.org/wiki/Programming_language "Linguagem de programação") diferentes e permite que o editor de código e o depurador ofereçam suporte (em graus variados) a praticamente qualquer linguagem de programação, desde que exista um serviço específico de linguagem. As linguagens incorporadas incluem [C](https://en.wikipedia.org/wiki/C_(programming_language) "C (linguagem de programação)") , [[9]](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#cite_note-9)  [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++") , [C++/CLI](https://en.wikipedia.org/wiki/C%2B%2B/CLI "C++/CLI") , [Visual Basic .NET](https://en.wikipedia.org/wiki/Visual_Basic_.NET "Visual Basic .NET") , [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language) "C Sharp (linguagem de programação)") , [F#](https://en.wikipedia.org/wiki/F_Sharp_(programming_language) "F Sharp (linguagem de programação)") , [[10]](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#cite_note-10)  [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") , [TypeScript](https://en.wikipedia.org/wiki/TypeScript "TypeScript") , [XML](https://en.wikipedia.org/wiki/XML "XML") , [XSLT](https://en.wikipedia.org/wiki/XSLT "XSLT") , [HTML](https://en.wikipedia.org/wiki/HTML "HTML") e [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Folhas de estilo em cascata") . Suporte para outras linguagens como [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python (linguagem de programação)") , [[11]](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#cite_note-11)  [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language) "Ruby (linguagem de programação)") , [Node.js](https://en.wikipedia.org/wiki/Node.js "Node.js"), e [M,](https://en.wikipedia.org/wiki/MUMPS "CAXUMBA") entre outros, está disponível por meio de [plug-ins](https://en.wikipedia.org/wiki/Plug-in_(computing) "Plug-in (computação)") . [Java](https://en.wikipedia.org/wiki/Java_(programming_language) "Java (linguagem de programação)") (e [J#](https://en.wikipedia.org/wiki/J_Sharp "J Sustenido") ) eram suportados no passado.
 
-## Instalando a IDE Visual Studios
+## Instalando a IDE Visual Studios Code
 
 A instalação do Visual Studio é muito simples. Primeiramente, precisamos ter o arquivo de
 instalação da IDE, isso é bem fácil de encontrar. Eu estou indicando o site oficial do Visual Studio 2022 que segue o link:
@@ -70,16 +64,21 @@ impressora e etc.
 
 ![enter image description here](https://i.imgur.com/PeY3kXN.png)
 
-```c#
-using System;
+```html
 
-class Hello
-{
-    static void Main()
-    {
-        Console.WriteLine("Hello, World");
-    }
-}
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+</body>
+</html>
+
 ```
 
 
