@@ -119,7 +119,7 @@ de entrada de dados pelo teclado.
 **Entrada de texto digitado pelo usuário**
 
 ```javascript
-string userName = prompt();
+var userName = prompt();
 ```
 
 retorna uma cadeia de caracteres simples, ou seja, que não usa o
@@ -136,10 +136,10 @@ if (signo.toLowerCase() == "escorpião") {
 }
 
 // há muitas formas de se usar o recurso prompt
-var sign = window.prompt(); // abrir uma janela de promtpt em branco
+var sign = prompt(); // abrir uma janela de promtpt em branco
 var sign = prompt();       //  abrir uma janela de promtpt em branco
-var sign = window.prompt('Você está se sentindo com sorte'); // abrir uma janela com o texto "Você está se sentindo com sorte"
-var sign = window.prompt('Você está se sentindo com sorte', 'certamente'); // abrir uma janela com o texto "Você está se sentindo com sorte" e com o valor padrão "certamente"
+var sign = prompt('Você está se sentindo com sorte'); // abrir uma janela com o texto "Você está se sentindo com sorte"
+var sign = prompt('Você está se sentindo com sorte', 'certamente'); // abrir uma janela com o texto "Você está se sentindo com sorte" e com o valor padrão "certamente"
 ```
 
 | <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar a comunicação para a leitura dos materias e para perguntar para o instrutor caso tenha duvida* |
@@ -515,7 +515,7 @@ Exemplo usando o break:
 ```c#
 var dia;
 console.log("Digite um numero para encontrar o seu dia: ");
-dia =  Console.ReadLine();
+dia =  pront();
 switch (dia) {
 case 1:
  console.log("Domingo");
@@ -766,37 +766,19 @@ obter um resultado.
   sendo chamada pelo _main_.
 
 ```c#
-using  System;
-namespace  ExFuncao
+    opcao = 0;
 
-{
-	class  ExFuncao
-	{
-	static  void  Main(string[] args)
+    do {
+        opcao = MostrarMenu();
+    }  while (opcao != 2);
 
-		{
-
-		int opcao;
-
-		do {
-
-			opcao = MostrarMenu();
-
-		   } while (opcao != 2);
-
-		}
-
-		public static int MostrarMenu(){
-			string entrada;
-			Console.WriteLine("==-MostrarMenu==");
-			Console.WriteLine("1 Mostrar de novo");
-			Console.WriteLine("2  - Sair");
-			return entrada = Console.ReadLine();
-		{
-
-	}
-
-}
+    function MostrarMenu(params) {
+        entrada= "";
+        console.log("==-MostrarMenu==");
+        console.log("1 Mostrar de novo");
+        console.log("2  - Sair");
+        return entrada = prompt();
+    }
 ```
 
 Outro exemplo que podemos ulizar uma função é calcular os descontos percentuais
@@ -810,7 +792,7 @@ em valores de produtos.
 
 
 ```c#
-public static double calcDesc(double va, double pc) {
+function MostrarMenu(va, pc) {
    double vd = va * (pc / 100); 
    return va - vd;
 }
@@ -869,10 +851,10 @@ nome, então para isso teríamos que criar alguns atributos para a mesma, por ex
 
 
 ```c#
-public class Pessoa {
-	private string primeiroNome;
-	private string ultimoNome;
-	private string nomesDoMeio;
+class Pessoa {
+	private  primeiroNome: string;
+	private  ultimoNome: string;
+	private  nomesDoMeio: string;
 }
 ```
 
@@ -884,13 +866,20 @@ Mas não basta criar os atributos, temos que também dar algumas funcionalidades
 os mesmos, para isso criamos um método para retornar o nome completo por exemplo.
 
 ```c#
-public string getNomeCompleto() {
-	string nomeCompleto = primeiroNome + " "  nomeDoMeio + " " + ultimoNome;
-	return nomeCompleto;
+class Pessoa {
+	private  primeiroNome: string;
+	private  ultimoNome: string;
+	private  nomesDoMeio: string;
+
+    public getNomeCompleto() {
+        var nomeCompleto = this.primeiroNome + " "+  this.nomesDoMeio + " " + this.ultimoNome;
+        return nomeCompleto;
+    }
 }
+
 ```
 
-A primeira linha, public string getNomeCompleto(), especifica o método. Primeiro,
+A primeira linha, public getNomeCompleto(), especifica o método. Primeiro,
 declara-se, através da palavra-chave public, que o método é público – isto é, qualquer
 método, de qualquer classe, pode invocá-lo. O método retorna objetos do tipo string e
 se chama getNomeCompleto. O par de parênteses vazio significa que ele não recebe
@@ -920,22 +909,20 @@ Pessoa pessoa = new Pessoa();
 Agora vamos criar uma pessoa chamada Francisco Pinho Nunes.
 
 ```c#
-public class ProgramaNome {
-	public static void main(String[] args) {
-		Pessoa pessoa = new Pessoa();
-		pessoa.primeiroNome = “Francisco”;
-		pessoa.nomeDoMeio = “Pinho”;
-		pessoa.ultimoNome = “Nunes”;
-		Console.WriteLine(pessoa.getNomeCompleto());
-	}
-}
+
+Pessoa pessoa = new Pessoa();
+pessoa.primeiroNome = “Francisco”;
+pessoa.nomeDoMeio = “Pinho”;
+pessoa.ultimoNome = “Nunes”;
+console.log(pessoa.getNomeCompleto());
+
 ```
 No entanto, isto não é possível porque os atributos são privados. Apenas os métodos da
 classe _Pessoa_ podem acessá-los. Isso pode ser solucionado de várias maneiras, e uma
 das mais elegantes é criando o nosso próprio construtor, como abaixo:
 
 ```c#
-public string Pessoa(string primeiro, string meio, string ultimo ) {
+function Pessoa(primeiro, meio, ultimo ) {
     primeiroNome = primeiro;
     ultimoNome = ultimo;
     nomeDoMeio = meio;
@@ -959,41 +946,35 @@ Pessoa pessoa = new Pessoa( "Francisco", "Pinho", "Nunes" );
 Só para idenficar, vejamos como ficou a classe _Pessoa_ completa:
 
 ```c#
-using  System;
-namespace  Pessoa
 
-{
 	class  Pessoa
 	{
-		private string primeiroNome;
-		private string nomeDoMeio;
-		private string ultimoNome;
+		primeiroNome:string;
+		nomeDoMeio:string;
+		ultimoNome:string;
 
-		public string Pessoa(string primeiro, string meio, string ultimo ) {
-    		primeiroNome = primeiro;
-    		ultimoNome = ultimo;
-    		nomeDoMeio = meio;
-		}
+        constructor(primeiroNome:string, nomeDoMeio:string, ultimoNome:string)
+        {
+            this.primeiroNome = primeiroNome;
+            this.nomeDoMeio = nomeDoMeio;
+            this.ultimoNome = ultimoNome;
+        }
 
-		public string getNomeCompleto() {
-			string nomeCompleto = primeiroNome + " "  nomeDoMeio + " " + ultimoNome;
-			return nomeCompleto;
-		}
+        public getNomeCompleto() {
+            var nomeCompleto = this.primeiroNome + " "+  this.nomeDoMeio + " " + this.ultimoNome;
+            return nomeCompleto;
+        }
 
-	}
-
-}
+    }
 ```
 
 E a classe ProgramaNome, que utiliza a classe Pessoa para gerar um nome completo a
 partir das partes.
 
 ```c#
-public class ProgramaNome {
-public static void main(String[] args) {
 Pessoa pessoa = new Pessoa("Francisco","Pinho","Nunes");
-Console.WriteLine(pessoa.getNomeCompleto());
-} }
+console.log(pessoa.getNomeCompleto());
+
 ```
 ### Objeto this
 
@@ -1005,19 +986,20 @@ ser atribuído à variável de instância totalAssentos.
 
 ```
 class Aeronave {
-int totalAssentos;
-int assentosReservados;
-
-void reservarAssentos(int assentos) {
-assentosReservados += assentos;
-}
-
-int calcularAssentosDisponiveis() {
-return totalAssentos - assentosReservados;
-}
-
-void alterarTotalAssentos(int totalAssentos) {
-this.totalAssentos = totalAssentos;
+    totalAssentos:number;
+    assentosReservados:number;
+    
+    reservarAssentos(assentos:number):void {
+        var assentosReservados =+ assentos;
+    }
+    
+    calcularAssentosDisponiveis():number {
+    return  this.totalAssentos - this.assentosReservados;
+    }
+    
+     alterarTotalAssentos(totalAssentos:number):void {
+    this.totalAssentos = totalAssentos;
+    }
 }
 ```
 
@@ -1055,37 +1037,57 @@ modificá-la.
 Exemplo:
 
 ```c#
-public class Carro {
+class Carro {
     
-private double velocidade;
-private string modelo;
-private MecanismoAceleracao mecanismoAceleracao;
-private string cor;
+    private velocidade: number;
+    private modelo: string;
+    private MecanismoAceleracao: MecanismoAceleracao;
+    private cor:string;
+        
+    /* Repare que o mecanismo de aceleração é inserido no carro ao ser construí
+    public Carro(String modelo, MecanismoAceleracao mecanismoAceleracao) {
+        this.modelo = modelo;
+        this.mecanismoAceleracao = mecanismoAceleracao; this.velocidade = 0; }
+    public void acelerar() {
+        this.mecanismoAceleracao.acelerar(); }
+    public void frear() { /* código do carro para frear */ 
     
-/* Repare que o mecanismo de aceleração é inserido no carro ao ser construí
-public Carro(String modelo, MecanismoAceleracao mecanismoAceleracao) {
-	this.modelo = modelo;
-	this.mecanismoAceleracao = mecanismoAceleracao; this.velocidade = 0; }
-public void acelerar() {
-	this.mecanismoAceleracao.acelerar(); }
-public void frear() { /* código do carro para frear */ }
+    constructor(modelo: string, mecanismoAceleracao: MecanismoAceleracao, cor:string) {
+        this.modelo = modelo;
+        this.MecanismoAceleracao = mecanismoAceleracao;
+        this.cor = cor;
+    }
 
-public void acenderFarol() { /* código do carro para acender o farol */ }
+    acelerar():void {
+        this.mecanismoAceleracao.acelerar();
+    }
 
-public Double getVelocidade() { return this.velocidade }
+    frear():void {/* código do carro para frear */}
 
-private void setVelocidade() {
-/* código para alterar a velocidade do carro */ /* Como só o próprio carro*/
+    acenderFarol():void {/* código do carro para acender o farol */}
+
+    getVelocidade():number { 
+        return this.velocidade
+    }
+
+    setVelocidade():void {
+        /* código para alterar a velocidade do carro */ /* Como só o próprio carro*/    
+    }
+
+    getModelo() {
+         return this.modelo;
+         }
+
+    getCor() { 
+        return this.cor; 
+    }
+    /* podemos mudar a cor do carro quando quisermos */
     
-}
+    setCor(cor:string) { 
+        this.cor = cor; 
+    }
 
-public String getModelo() { return this.modelo; }
-
-public String getCor() { return this.cor; }
-/* podemos mudar a cor do carro quando quisermos */
-    
-public void setCor(String cor) { this.cor = cor; }
-    
+        
 }
 ```
 ### Herança
@@ -1102,10 +1104,12 @@ as atividades que todos eles executam. Uma dessas atividades é comer, e nossa c
 poderia ser como a abaixo.
 
 ```c#
-public class Animal {
-	public void comer(String alimento) {
-		Console.WriteLine("Eu estou comendo "+alimento);
-	}
+class Animal {
+
+    comer(alimento:string):void {
+        console.log("Eu estou comendo "+alimento);  
+    }
+	
 }
 ```
 Uma classe de mamíferos _estenderia_ a classe de animais, porque mamíferos podem fazer
@@ -1113,13 +1117,13 @@ coisas que outros animais não podem – por exemplo, gerar leite. Uma classe Ma
 estenderia a classe _Animal_ usando a sinal **:** em sua declaração:
 
 ```c#
-public class Mamifero:Animal {
+class Mamifero implements Animal {
 }
 ```
 Um novo método, _lactar()_ , também poderia ser adicionado:
 
 ```c#
-public String lactar() {
+lactar():string {
 return "leite" ;
 }
 ```
@@ -1128,15 +1132,15 @@ vantagens da herança: como a classe Mamífero estende a classe Animal, ela _her
 os métodos de Animal, então não é preciso reescrevê-los.
 
 ```c#
-public class AnimaisAcao {
-	public static void main(string[] args) {
-		Animal animal = new Animal();`
+class AnimaisAcao {
+
+		Animal animal = new Animal();
 		Mamifero mamifero = new Mamifero();
 		animal.comer (" plantas ");
 		mamifero.comer (" queijo ");
 		string produto = mamifero.lactar();
-		Console.WriteLine("O produto da lactação é "+ produto);
-	}
+		console.log("O produto da lactação é "+ produto);
+
 }
 ```
 O programa acima representa bem isso: note como o método comer() é invocado,
@@ -1150,68 +1154,6 @@ A figura abaixo mostra a impressão deste programa:
 
 | <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes no sinal de : para herança em C#* |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
-
-
-
-
-
-### Sobrescrita de métodos
-
-Uma classe pode ter dois ou mais métodos com o mesmo nome, desde que os tipos de
-seus argumentos sejam distintos.
-Isso é útil quando queremos implementar um método em função de outro.
-Então falamos que sobrecarga de métodos é um conceito simples da orientação a
-objetos, que permite a criação de vários métodos com o mesmo nome, mas com
-parâmetros diferentes.
-Para exemplifica vamos pegar uma classe Aeronave que irá permitir reservar os assentos
-normais e os especiais.
-
-Agora vamos sobrecarregar o método reservarAssentos , incluindo uma nova versão com
-parâmetros adicionais:
-
-```c#
-void reservarAssentos(int assentosNormais, int assentosEspeciais) {
-	this.assentosNormaisReservados += assentosNormais;
-	this.assentosEspeciaisReservados += assentosEspeciais;
-}
-```
-```c#
-class Aeronave {
-	int totalAssentosNormais;
-	int totalAssentosEspeciais;
-	int assentosNormaisReservados;
-	int assentosEspeciaisReservados;
-    
-void reservarAssentos(int assentos) { this.assentosNormaisReservados += ass
-}
-    
-int calcularAssentosDisponiveis() {
-	return totalAssentosNormais - assentosNormaisReservados + totalAssentosEspe
-}
-```
-
-
-O método acima recebe, além do número de assentos normais, o total de assentos
-especiais a serem reservados. Isso é sobrecarga de métodos! Temos duas versões de
-métodos com o nome _reservarAssentos_. Vamos ver as assinaturas desses métodos?
-
-```c#
-void reservarAssentos(int)
-void reservarAssentos(int, int)
-```
-Sobrecarga de métodos é algo simples de ser feito, mas tem uma restrição que a própria
-linguagem impõe. Não é possível ter duas versões de métodos com a mesma assinatura.
-Por exemplo, seria impossível ter o método a seguir na _classeAeronave_ :
-
-```c#
-void reservarAssentos(int assentosEspeciais) {
-this.assentosEspeciaisReservados += assentosEspeciais;
-}
-```
-O código acima seria uma tentava de criar uma versão do método _reservarAssentos_ ,
-para reservar assentos especiais, mas não funcionaria (nem compilaria), porque a classe
-Aeronave já possui um método _reservarAssentos_ que recebe um int.
-
 
 
 ### Interface
@@ -1232,20 +1174,14 @@ assinaturas de métodos que virão a ser implementados pelas classes referentes 
 figuras geométricas.
 
 ```c#
-using  System;
-namespace  Pessoa
-
-{
-	public  interface FiguraGeometrica
+interface FiguraGeometrica
     {
         
-        public string getNomeFigura();
-        public int getArea();
-        public int getPerimetro();
+        getNomeFigura():string;
+        getArea():number;
+        getPerimetro():number;
 
     }  
-	
-}
 ```
 
 Para realizar a chamada/referência a uma interface por uma determinada classe, é
@@ -1267,31 +1203,31 @@ chamada Quadrado e outra Triangulo.
 Classe Quadrado
 
 ```c#
-/*
-@author Robson Fernando Gomes
-*/
-public class Quadrado : FiguraGeometrica {
-	private int lado;
-	public int getLado() {
-	return lado;
-}
-public void setLado(int lado) {
+class Quadrado implements FiguraGeometrica {
+	private lado:number;
+
+
+	public getLado():number {
+	return this.lado;
+    }
+
+    public setLado(lado:number):void {
 	this.lado = lado;
-}
+    }
 
 
-public override int getArea() {
-	int area = 0;
-	area = lado * lado;
+    getArea():number {
+	var area = 0;
+	area = this.lado * this.lado;
 	return area;
-}
+    }
 
-public override  int getPerimetro() {
-	int perimetro = 0;
-	perimetro = lado * 4;
-	return perimetro;
-}
-public override  string getNomeFigura() {
+    getPerimetro():number {
+	    var perimetro = 0;
+	    perimetro = this.lado * 4;
+	    return perimetro;
+    }
+    getNomeFigura():string {
 	return "quadrado";
 	}
 }
@@ -1299,51 +1235,51 @@ public override  string getNomeFigura() {
 Classe Triangulo
 
 ```c#
-public class Triangulo : FiguraGeometrica {
+class Triangulo implements FiguraGeometrica {
 
-	private int base;
-	private int altura;
-	private int ladoA;
-	private int ladoB;
-	private int ladoC;
+	private base:number;
+	private altura:number;
+	private ladoA:number;
+	private ladoB:number;
+	private ladoC:number;
 
-public int getAltura() {
-	return altura;
+public getAltura():number {
+	return this.altura;
 }
 
-public void setAltura(int altura) {
+public  setAltura(altura:number):void {
 	this.altura = altura;
 }
 
-public int getBase() {
-	return base;
+public getBase():number {
+	return this.base;
 }
 
-public void setBase(int base) {
+public setBase(base:number):void {
 	this.base = base;
 }
 
-public int getLadoA() {
-	return ladoA;
+public getLadoA():number {
+	return this.ladoA;
 }
 
-public void setLadoA(int ladoA) {
+public setLadoA(ladoA:number):void  {
 	this.ladoA = ladoA;
 }
 
-public int getLadoB() {
-	return ladoB;
+public getLadoB():number {
+	return this.ladoB;
 }
 
-public void setLadoB(int ladoB) {
+public setLadoB(ladoB:number):void  {
 	this.ladoB = ladoB;
 }
 
-public int getLadoC() {
-	return ladoC;
+public getLadoC():number {
+	return this.ladoC;
 }
 
-public void setLadoC(int ladoC) {
+public setLadoC(ladoC:number):void {
 	this.ladoC = ladoC;
 }
 
@@ -1353,15 +1289,15 @@ public override string getNomeFigura() {
 }
 
 
-public override int getArea() {
-	int area = 0;
-	area = (base * altura) / 2;
+public getArea():number {
+	var area = 0;
+	var area = (this.getBase() * this.getAltura()) / 2;
 	return area;
 }
 
-public override int getPerimetro() {
-	int perimetro = 0;
-	perimetro = ladoA + ladoB + ladoC;
+public getPerimetro():number {
+	var perimetro = 0;
+	var perimetro = this.ladoA + this.ladoB + this.ladoC;
 		return perimetro;
 	}
 }
@@ -1389,20 +1325,20 @@ comem ração e Tigres carne. Você pode chamar o método comer nessas 2 classes
 mesmo sabendo que elas se comportam diferentemente.
 
 ```c#
-public class Animal {
-	public void comer() {
-		Console.WriteLine( "Animal Comendo..." );
+class Animal {
+	public comer():void {
+		console.log( "Animal Comendo..." );
 	}
 }
 
-public class Cao : Animal {
-	public void comer() {
-	Console.WriteLine( "Cão Comendo..." );
+class Cao implements Animal {
+	public  comer():void {
+	console.log( "Cão Comendo..." );
 	}
 }
-public class Tigre : Animal {
-	public void comer() {
-	Console.WriteLine( "Tirgre Comendo..." );
+class Tigre implements Animal {
+	public comer():void {
+	console.log( "Tirgre Comendo..." );
 	}
 }
 ```
@@ -1411,17 +1347,16 @@ public class Tigre : Animal {
 No caso a sua chamado de método polimórfico ficaria assim:
 
 ```c#
-public class Test {
-	public void fazerAnimalComer( Animal animal ) {
+class Test {
+	public  fazerAnimalComer:void( animal:Animal ) {
 	animal.comer();
 }
-public static void main( string[] args ) {
-	Test t = new Test();
-	t.fazerAnimalComer( new Animal() );
-	t.fazerAnimalComer( new Cao() );
-	t.fazerAnimalComer( new Trigre() );
-	}
-}
+
+Test t = new Test();
+t.fazerAnimalComer( new Animal() );
+t.fazerAnimalComer( new Cao() );
+t.fazerAnimalComer( new Trigre() );
+
 ```
 Você vai notar que cada chamada vai fazer uma coisa diferente, porém como existe
 herança entre as classes todos os métodos vão funcionar, porque são do tipo do mais
@@ -1471,25 +1406,21 @@ Exemplo da ulização do bloco try/catch:
 ```
 
 ```c#
-public stac void main(String args[])
-{
-	string frase = null;
-	string novaFrase = null;
-try
-{
-	novaFrase = frase.toUpperCase();
+var frase:string = '';
+var novaFrase:string = '';
+
+try {
+    novaFrase = frase.toUpperCase();
+} catch (error) {
+     //TRATAMENTO DA exceção
+     console.log('O frase inicial está nula,para solucional tal o problema, foi lhe atribuito um valor default.');
+    frase = 'Frase vazia';
+    novaFrase = frase.toUpperCase();
 }
-catch (InvalidCastException  e) //CAPTURA DA POSSÍVEL exceção.
-{
-	//TRATAMENTO DA exceção
-	Console.WriteLine(“O frase inicial está nula,
-	para solucional tal o problema, foi lhe atribuito um valor default.”);
-	frase = “Frase vazia”;
-	novaFrase = frase.toUpperCase();
-}
-	Console.WriteLine("Frase anga: "+frase);
-	Console.WriteLine("Frase nova: "+novaFrase);
-}
+
+console.log("Frase anga: " + frase);
+console.log("Frase nova: " + novaFrase);
+
 /*Quando este código for executado, o mesmo lançará uma NullPointerExcepon,
 porém esta exceção será tratada desta vez, sendo a mesma capturada pelo catch{}
 e dentro deste bloco as devidas providências são tomadas. Neste caso é atribuído
@@ -1506,36 +1437,20 @@ Não é possível deixar um bloco try-catch-finally sem executar sua parte final
 Vejamos um exemplo para este bloco:
 
 ```c#
-void readFile(string name) throws IOException {
-	FileStream  file = null;
-	try { file = new FileStream(name); ... // lê o arquivo }
-	catch (Exception e)
-		{ Console.WriteLine(e); }
-	finally {
-		if (file != null)
-		file.close(); } }
-```
-### Comandos throw e throws
-
-As cláusulas throw e throws podem ser entendidas como ações que propagam
-exceções, ou seja, em alguns momentos existem exceções que não podem ser tratadas
-no mesmo método que gerou a exceção. Nesses casos, é necessário propagar a exceção
-para um nível acima na pilha.
-
-```c#
-static int GetValueFromArray(int[] array, int index)
-{
-    try
-    {
-        return array[index];
-    }
-    catch (IndexOutOfRangeException ex)
-    {
-        throw new ArgumentException("Index is out of range", nameof(index), ex);
-    }
+let x = prompt();
+try { 
+  if(x == "")  throw "is Empty";
+  if(x =! 0) throw "not a number";
+  if(x > 10)   throw "too high";
+  if(x < 5)  throw "too low";
+}
+catch(err) {
+  console.log(err);
+}
+finally {
+console.log("finally");
 }
 ```
-
 
 ## Collections
 
@@ -1560,19 +1475,16 @@ Os exemplos nesta seção usam a classe genérica [List](https://docs.microsoft.
 O exemplo a seguir cria uma lista de cadeias de caracteres e, em seguida, itera nas cadeias de caracteres usando uma instrução [foreach](https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement).
 
 ```c#
-c// Create a list of strings.
-var salmons = new List<string>();
-salmons.Add("chinook");
-salmons.Add("coho");
-salmons.Add("pink");
-salmons.Add("sockeye");
+var salmons:string[] = []
+salmons.push("chinook");
+salmons.push("coho");
+salmons.push("pink");
+salmons.push("sockeye");
 
 // Iterate through the list.
-foreach (var salmon in salmons)
-{
-    Console.Write(salmon + " ");
-}
-// Output: chinook coho pink sockeye
+salmons.forEach(salmon => {
+    console.log(salmon + " ");
+})
 ```
 
 
@@ -1585,12 +1497,11 @@ O exemplo a seguir é igual ao exemplo anterior, exceto que um inicializador de 
 ```c#
 // Create a list of strings by using a
 // collection initializer.
-var salmons = new List<string> { "chinook", "coho", "pink", "sockeye" };
+var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
 
-// Iterate through the list.
-foreach (var salmon in salmons)
-{
-    Console.Write(salmon + " ");
+for(let index = 0; index < salmons.length; index++) {
+    console.log(salmons[index] + " ");
+    
 }
 // Output: chinook coho pink sockeye
 ```
@@ -1601,11 +1512,11 @@ O exemplo a seguir itera nos elementos de uma coleção usando `for` em vez de `
 ```c#
 // Create a list of strings by using a
 // collection initializer.
-var salmons = new List<string> { "chinook", "coho", "pink", "sockeye" };
+var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
 
-for (var index = 0; index < salmons.Count; index++)
-{
-    Console.Write(salmons[index] + " ");
+for(let index = 0; index < salmons.length; index++) {
+    console.log(salmons[index] + " ");
+    
 }
 // Output: chinook coho pink sockeye
 ```
@@ -1613,152 +1524,16 @@ for (var index = 0; index < salmons.Count; index++)
 O exemplo a seguir remove um elemento da coleção, especificando o objeto a ser removido.
 
 ```c#
-// Create a list of strings by using a
-// collection initializer.
-var salmons = new List<string> { "chinook", "coho", "pink", "sockeye" };
+var salmons =  [ "chinook", "coho", "pink", "sockeye" ];
 
-// Remove an element from the list by specifying
-// the object.
-salmons.Remove("coho");
+for( var i = 0; i < salmons.length; i++){ 
+    
+    if ( salmons[i] == "chinook" ) { 
 
-// Iterate through the list.
-foreach (var salmon in salmons)
-{
-    Console.Write(salmon + " ");
-}
-// Output: chinook pink sockeye
-```
-
-O exemplo a seguir remove elementos de uma lista genérica. Em vez de `foreach` uma instrução , `for` uma instrução que itera em ordem decrescente é usada. Isso é feito porque o método [RemoveAt](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.list-1.removeat) faz com que os elementos após um elemento removido tenham um valor de índice menor.
-
-```
-var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
-// Remove odd numbers.
-for (var index = numbers.Count - 1; index >= 0; index--)
-{
-    if (numbers[index] % 2 == 1)
-    {
-        // Remove the element by specifying
-        // the zero-based index in the list.
-        numbers.RemoveAt(index);
+        salmons.splice(i, 1); 
     }
 }
-
-// Iterate through the list.
-// A lambda expression is placed in the ForEach method
-// of the List(T) object.
-numbers.ForEach(
-    number => Console.Write(number + " "));
-// Output: 0 2 4 6 8
 ```
-
-Para o tipo dos elementos na [List](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.list-1), você também pode definir sua própria classe. No exemplo a seguir, a classe `Galaxy` que é usada pela [List](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.list-1) é definida no código.
-
-```c#
-private static void IterateThroughList()
-{
-    var theGalaxies = new List<Galaxy>
-        {
-            new Galaxy() { Name="Tadpole", MegaLightYears=400},
-            new Galaxy() { Name="Pinwheel", MegaLightYears=25},
-            new Galaxy() { Name="Milky Way", MegaLightYears=0},
-            new Galaxy() { Name="Andromeda", MegaLightYears=3}
-        };
-
-    foreach (Galaxy theGalaxy in theGalaxies)
-    {
-        Console.WriteLine(theGalaxy.Name + "  " + theGalaxy.MegaLightYears);
-    }
-
-    // Output:
-    //  Tadpole  400
-    //  Pinwheel  25
-    //  Milky Way  0
-    //  Andromeda  3
-}
-
-public class Galaxy
-{
-    public string Name { get; set; }
-    public int MegaLightYears { get; set; }
-}
-```
-
-
-
-```c#
-public class Triangulo : FiguraGeometrica {
-
-	private int base;
-	private int altura;
-	private int ladoA;
-	private int ladoB;
-	private int ladoC;
-
-public int getAltura() {
-	return altura;
-}
-
-public void setAltura(int altura) {
-	this.altura = altura;
-}
-
-public int getBase() {
-	return base;
-}
-
-public void setBase(int base) {
-	this.base = base;
-}
-
-public int getLadoA() {
-	return ladoA;
-}
-
-public void setLadoA(int ladoA) {
-	this.ladoA = ladoA;
-}
-
-public int getLadoB() {
-	return ladoB;
-}
-
-public void setLadoB(int ladoB) {
-	this.ladoB = ladoB;
-}
-
-public int getLadoC() {
-	return ladoC;
-}
-
-public void setLadoC(int ladoC) {
-	this.ladoC = ladoC;
-}
-
-
-public override string getNomeFigura() {
-	return "Triangulo";
-}
-
-
-public override int getArea() {
-	int area = 0;
-	area = (base * altura) / 2;
-	return area;
-}
-
-public override int getPerimetro() {
-	int perimetro = 0;
-	perimetro = ladoA + ladoB + ladoC;
-		return perimetro;
-	}
-}
-```
-
-| <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes nos metodos de inclusão de dados Add() e exclusão Remove() das List* |
-| ------------------------------------------------------------ | :----------------------------------------------------------- |
-
 
 
 ## Estrutura forEach
@@ -1766,13 +1541,11 @@ public override int getPerimetro() {
 A instrução executa uma instrução ou um bloco de instruções para cada elemento em uma instância do tipo que implementa a interface ou , como mostra o `foreach` exemplo a [System.Collections.IEnumerable](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.ienumerable) [System.Collections.Generic.IEnumerable](https://docs.microsoft.com/pt-br/dotnet/api/system.collections.generic.ienumerable-1) seguir:
 
 ```
-var fibNumbers = new List<int> { 0, 1, 1, 2, 3, 5, 8, 13 };
-foreach (int element in fibNumbers)
-{
-    Console.Write($"{element} ");
-}
-// Output:
-// 0 1 1 2 3 5 8 13
+const fruits = ["apple", "orange", "cherry"];
+
+fruits.forEach(element => {
+    console.log(element);
+})
 ```
 
 A `foreach` instrução não está limitada a esses tipos. Você pode usá-lo com uma instância de qualquer tipo que atenda às seguintes condições:
@@ -1782,130 +1555,11 @@ A `foreach` instrução não está limitada a esses tipos. Você pode usá-lo co
 
 
 
-### Lambda expression
-
-Uma expressão Lambda é uma função anônima que você pode usar para criar delegados ou tipos de árvore de expressão. Ao usar expressões lambda, você pode escrever funções locais que podem ser passadas como argumentos ou retornadas como o valor de chamadas de função. 
-
-## Como criar um expressão lambda?
-
-Para criar uma expressão lambda, especifique os parâmetros de entrada (se houver) no lado esquerdo do operador lambda =>, e coloque a expressão ou o bloco de instruções do outro lado.
-
-Por exemplo, a expressão lambda **x => x \* x** especifica um parâmetro chamado “**x**” e retorna o valor de **x** **ao quadrado**.
-
-Você pode atribuir essa expressão a um tipo delegate da seguinte forma:
-
-```c#
-delegate int delegado(int i);  
-
-static void Main(string[] args)  
-{  
-    delegado meuDelegate = x => x * x;  
-    int valor = meuDelegate(5);  
-}
-```
-
-## Var variáveis locais de tipo implícito
-
-
-Variáveis locais podem ser declaradas sem fornecer um tipo explícito. A palavra-chave `var` instrui o compilador a inferir o tipo da variável da expressão no lado direito da instrução de inicialização. O tipo inferido pode ser um tipo integrado, um tipo anônimo, um tipo definido pelo usuário ou um tipo definido na biblioteca de classes do .NET. Para obter mais informações sobre como inicializar matrizes com `var`, consulte [Matrizes de tipo implícito](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/arrays/implicitly-typed-arrays).
-
-Os exemplos a seguir mostram várias maneiras em que as variáveis locais podem ser declaradas com `var`:
-
-```c#
-// i is compiled as an int
-var i = 5;
-
-// s is compiled as a string
-var s = "Hello";
-
-// a is compiled as int[]
-var a = new[] { 0, 1, 2 };
-
-// expr is compiled as IEnumerable<Customer>
-// or perhaps IQueryable<Customer>
-var expr =
-    from c in customers
-    where c.City == "London"
-    select c;
-
-// anon is compiled as an anonymous type
-var anon = new { Name = "Terry", Age = 34 };
-
-// list is compiled as List<int>
-var list = new List<int>();
-```
-
-É importante entender que a palavra-chave `var` não significa "variante" e não indica que a variável é vagamente tipada ou de associação tardia. Isso apenas significa que o compilador determina e atribui o tipo mais apropriado.
-
-
-
-## DateTime 
-
-Obtém o componente de data da instância.
-
-```c#
-public DateTime Date { get; }
-```
-
-####  Valor da propriedade
-
-- [DateTime](https://docs.microsoft.com/pt-br/dotnet/api/system.datetime?view=net-6.0)
-
-Um novo objeto com a mesma data que essa instância e o valor temporal definido como meia-noite em 12:00:00 (00:00:00).
-
-## Exemplos
-
-O exemplo a seguir usa a [Date](https://docs.microsoft.com/pt-br/dotnet/api/system.datetime.date?view=net-6.0) propriedade para extrair o componente de data de um [DateTime](https://docs.microsoft.com/pt-br/dotnet/api/system.datetime?view=net-6.0) valor com seu componente de tempo definido como zero (ou 0:00:00, ou meia-noite). Ele também ilustra que, dependendo da cadeia de caracteres de formato usada ao exibir o [DateTime](https://docs.microsoft.com/pt-br/dotnet/api/system.datetime?view=net-6.0) valor, o componente de tempo pode continuar a aparecer na saída formatada.
-
-```c#
-using System;
-
-public class Example
-{
-   public static void Main()
-   {
-      DateTime date1 = new DateTime(2008, 6, 1, 7, 47, 0);
-      Console.WriteLine(date1.ToString());
-
-      // Get date-only portion of date, without its time.
-      DateTime dateOnly = date1.Date;
-      // Display date using short date string.
-      Console.WriteLine(dateOnly.ToString("d"));
-      // Display date using 24-hour clock.
-      Console.WriteLine(dateOnly.ToString("g"));
-      Console.WriteLine(dateOnly.ToString("MM/dd/yyyy HH:mm"));
-   }
-}
-// The example displays output like the following output:
-//       6/1/2008 7:47:00 AM
-//       6/1/2008
-//       6/1/2008 12:00 AM
-//       06/01/2008 00:00
-```
 
 | <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes no formato de data do DateTime |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
 
 
-
-### Vamos trabalhar com o Now
-
-Vamos utilizar a função **Now** do Datetime, que pega a data e hora atual do seu sistema operacional, com isto ele faz a atribuição do horário para variável de maneira automática.
-
-E como definimos para pegar a formatação do Brasil, não precisamos nos preocupar como vai vir a data e nem se ela será digitada errada.
-
-```c#
-DateTime dataEntrada = DateTime.Now;
-
-Console.WriteLine(dataEntrada);
-```
-
-Nosso valor de saída vai ser a hora atual do meu sistema.
-
-```
-
-01/05/2019 14:20:11
-```
 
 # Métodos da Classe String
 
