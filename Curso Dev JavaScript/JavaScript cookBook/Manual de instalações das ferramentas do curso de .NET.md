@@ -16,7 +16,7 @@ O JavaScript é uma linguagem baseada em protótipos, multi-paradigma e dinâmic
 
 O Visual Studio Code é baseado no Electron, um framework que é usado para desenvolver aplicativos Node.js para o desktop rodando no motor de layout Blink. Apesar de usar o Electron como framework,[6] o software não usa o Atom e em seu lugar emprega o mesmo componente editor (apelidado "Monaco") usado no Visual Studio Team Services (anteriormente chamado de Visual Studio Online)
 
-## Instalando a IDE Visual Studios Code
+## Instalando a Editor Visual Studios Code
 
 A instalação do Visual Studio Code é muito simples. Primeiramente, precisamos ter o arquivo de
 instalação da IDE, isso é bem fácil de encontrar.  segue o link:
@@ -27,6 +27,16 @@ https://visualstudio.microsoft.com/pt-br/downloads/
 Depois de Realizar o download, instale o vs code em sua maquina.
 
 
+
+## Instalando Node 
+
+A instalação do Node é muito simples. Primeiramente, precisamos ter o arquivo de
+instalação do Node, isso é bem fácil de encontrar.  segue o link:
+https://nodejs.org/en/
+
+![enter image description here](https://i.imgur.com/Vk9QXYo.png)
+
+Depois de Realizar o download, instale o node em sua maquina.
 
 ## Extenções no Vscode
 

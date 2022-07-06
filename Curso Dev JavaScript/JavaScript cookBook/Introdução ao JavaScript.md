@@ -16,7 +16,7 @@ O JavaScript é uma linguagem baseada em protótipos, multi-paradigma e dinâmic
 
 O Visual Studio Code é baseado no Electron, um framework que é usado para desenvolver aplicativos Node.js para o desktop rodando no motor de layout Blink. Apesar de usar o Electron como framework,[6] o software não usa o Atom e em seu lugar emprega o mesmo componente editor (apelidado "Monaco") usado no Visual Studio Team Services (anteriormente chamado de Visual Studio Online)
 
-## Instalando a IDE Visual Studios Code
+## Instalando a Editor de codigo  Visual Studios Code
 
 A instalação do Visual Studio Code é muito simples. Primeiramente, precisamos ter o arquivo de
 instalação da IDE, isso é bem fácil de encontrar.  segue o link:
@@ -26,7 +26,15 @@ https://visualstudio.microsoft.com/pt-br/downloads/
 
 Depois de Realizar o download, instale o vs code em sua maquina.
 
+## Instalando Node 
 
+A instalação do Node é muito simples. Primeiramente, precisamos ter o arquivo de
+instalação do Node, isso é bem fácil de encontrar.  segue o link:
+https://nodejs.org/en/
+
+![enter image description here](https://i.imgur.com/Vk9QXYo.png)
+
+Depois de Realizar o download, instale o node em sua maquina.
 
 ## Extenções no Vscode
 
@@ -58,10 +66,89 @@ Instale a extenção clicando no botão instalar
 - **JavaScript and TypeScript Nightly** (Extensão do VS Code que permite a compilação noturna do TypeScript (typescript@next) como a versão interna do TypeScript do VS Code usada para alimentar o JavaScript e o TypeScript IntelliSense.).)
 - **HTML Snippets** (Esta extensão contém trechos de código HTML  para o editor Vs Code )
 - **HTML CSS Support** (Esta extensão contém trechos de código HTML e css  para o editor Vs Code )
+- **Code Runner** (Esta extensão permite executar  codigo javaScript no console do vsCode através do node)
+
+## Formas de Execução de codigo javaScript (Navegador/Node) 
+
+### Execução de codigo javaScript pelo navegador
+
+este método nececita de 2 arquivos um arquivo javaScript e um arquivo html com uma tag script que referencia através do **src** o arquivo javascript como no exemplo abaixo.
+
+**script.js**
+
+```javascript
+var mensagem = "Ola mundo!"
+alert(mensagem)
+```
+
+**index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
+```
+
+Execute esse codigo no navegador clicando duas vezes no arquivo index.html
+
+![enter image description here](https://i.imgur.com/kly6z7L.png)
+
+![enter image description here](https://i.imgur.com/3P6C0Uv.png)
+
+### Execução de codigo javaScript pelo node
+
+este método nececita apena de um arquivo  javaScript
+
+**script.js**
+
+```javascript
+var mensagem = "Ola mundo!"
+console.log(mensagem)
+```
+
+Para executar esse codigo necessita do node instalado em sua maquina e da extenção vscode code runner
+
+![enter image description here](https://i.imgur.com/3jMGlAI.png)
+
+Com node e code runner instalado clique com botão direito  do mouse sobre o arquivo javascript que deseja executar, em seguida clique em Run Code.
+
+![enter image description here](https://i.imgur.com/2YoxB2Z.png)
+
+E pronto seu codigo irá executar no console do vscode sem a nescessidade de um navegador.
+
+**Obs esse modo de execução não suporta o método alert() apenas console.log()**
 
 
 
+## Forma de Execução por Navegador é recomendado para os conteudos:
 
+1. **Entrada e Saída de dados**
+2. **Declaração de Variáveis e Constantes**
+3. **Operadores**
+4. **Estruturas de Controle**
+5. **Estruturas de Repetição**
+6. **Arrays**
+
+
+
+## Forma de Execução por Node é recomendado para os conteudos:
+
+1. **Funções**
+2. **Orientação a Objetos**
+3. **Collections**
+4. **Métodos manipulação string**
+5. **Métodos manipulação array**
+6. **Arrow functions**
 
 
 
@@ -118,7 +205,13 @@ de um parâmetro de uma função.
 console.log("Hello, World");
 ```
 
+```javascript
+alert("Hello, World");
+```
 
+Console.log() imprime um texto no navegador 
+
+alert() imprime um texto em uma aba no seu navegador
 
 | <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar atenção aos detalhes nos detalhes de fechamento de escopo com as chaves termino de instrução com ;* |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
@@ -139,8 +232,9 @@ var userName = prompt();
 retorna uma cadeia de caracteres simples, ou seja, que não usa o
 caractere espaço em branco;
 
-
 **Exemplo de um programa ulizando a classe Scanner:**
+
+script.js
 
 ```javascript
 var signo = prompt("Qual é o seu signo?");
@@ -156,10 +250,28 @@ var sign = prompt('Você está se sentindo com sorte'); // abrir uma janela com 
 var sign = prompt('Você está se sentindo com sorte', 'certamente'); // abrir uma janela com o texto "Você está se sentindo com sorte" e com o valor padrão "certamente"
 ```
 
+index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
+```
+
 | <img src="https://i.imgur.com/vVDBDG0.png" title="source: imgur.com" width="300px"/> | **Alerta de BSM:** *Sempre importante utilizar a comunicação para a leitura dos materias e para perguntar para o instrutor caso tenha duvida* |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
 
-
+Execute esse codigo no navegador clicando duas vezes no arquivo index.html
 
 ## Declaração de Variáveis e Constantes
 
@@ -245,16 +357,42 @@ alterados durante a execução do programa. Para isso, utilizamos a palavra rese
 
 Exemplos de declaração de constantes:
 
+
+
+script.js
+
 ```javaScript
 
     const Pi = 3.14159;
     const SpeedOfLight = 300000; // km per sec.
     var radius = 5.3;
     var area = Constants.Pi * (radius * radius);
-    var secsFromSun = 149476000 / Constants.SpeedOfLight; // in km
-    Console.log(secsFromSun);
+    var secsFromSun = 149476000 // Constants.SpeedOfLight; // in km
+    alert(secsFromSun);
 
 ```
+
+
+
+index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
+```
+
+
 
 Por convenção, usamos letras maiúsculas para declarar constantes e assim disngui-las
 das variáveis.
@@ -383,17 +521,31 @@ Além da utilização do if, nós poderemos utilizar a cláusula else (senão) p
 comportamento que deve ser executado no caso da expressão booleana ser falsa.
 Vejamos o exemplo abaixo para identificar essas duas cláusulas:
 
-```javaScript
-string nome = Console.ReadLine();
-```
 ```javascript
+string nome = prompt();
 console.log("Nome: ");
-var nome = console.log();
+var nome = alert();
 console.log("Peso: ");
-var peso = Console.ReadLine();
+var peso = prompt();
 console.log("Altura: ");
-var altura = console.log();
+var altura = alert();
 var imc = peso / (altura * altura);
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
 ```
 
 Em relação a este exemplo caso o seu IMC for maior ou igual a 40 irá aparecer duas
@@ -410,52 +562,52 @@ iremos ulizar os operadores lógicos, como no exemplo abaixo:
 
 ```javaScript
 if (sexo == 'F' && imc < 19.1) {
-console.log("Abaixo do peso."); 
+alert("Abaixo do peso."); 
 }
 else if (sexo == 'F' && imc <= 25.8) {
-console.log("Peso ideal."); 
+alert("Peso ideal."); 
 }
 else if (sexo == 'F' && imc <= 27.3) {
-console.log("Um pouco acima do peso."); 
+alert("Um pouco acima do peso."); 
 }
 else if (sexo == 'F' && imc <= 32.3) {
-console.log("Acima do peso ideal.");
+alert("Acima do peso ideal.");
 }
 else if (sexo == 'F') { 
-console.log("Obeso.");
+alert("Obeso.");
 }
 else if (sexo == 'M' && imc < 20.7) {
-console.log("Abaixo do peso.");
+alert("Abaixo do peso.");
 }
 else if (sexo == 'M' && imc <= 26.4) {
-console.log("Peso ideal.");
+alert("Peso ideal.");
 }
 else if (sexo == 'M' && imc <= 27.8) {
-console.log("Um pouco acima do peso.");
+alert("Um pouco acima do peso.");
 }
 else if (sexo == 'M' && imc <= 31.1) {
-console.log("Acima do peso ideal."); 
+alert("Acima do peso ideal."); 
 }
 ```
 ```javaScript
 if (imc < 18.5)
-console.log("Abaixo do peso ideal.");
+alert("Abaixo do peso ideal.");
 else if (imc < 25)
-console.log("Peso ideal.");
+alert("Peso ideal.");
 else if (imc < 30)
-console.log("Acima do peso.");
+alert("Acima do peso.");
 else if (imc < 35)
-console.log("Obesidade grau I.");
+alert("Obesidade grau I.");
 else if (imc < 40)
-console.log("Obesidade grau II.");
+alert("Obesidade grau II.");
 else
-console.log("Obesidade grau III.");
-console.log("Muito cuidado com seu peso.");
+alert("Obesidade grau III.");
+alert("Muito cuidado com seu peso.");
 ```
 
 ```javaScript
 else if (sexo == 'M') {
-console.log("Obeso.");
+alert("Obeso.");
 }
 ```
 
@@ -516,40 +668,40 @@ Vamos verificar um exemplo para demonstrar a execução desse laço:
 
 ```javaScript
 switch (i) {
-case '1': console.log( "i contem um 1");
-case '2': console.log( "i contem um 2");
-case '3': console.log( "i contem um 3");
+case '1': alert( "i contem um 1");
+case '2': alert( "i contem um 2");
+case '3': alert( "i contem um 3");
 }
 ```
 Exemplo usando o break:
 
 ```javaScript
 var dia;
-console.log("Digite um numero para encontrar o seu dia: ");
+alert("Digite um numero para encontrar o seu dia: ");
 dia =  pront();
 switch (dia) {
 case 1:
- console.log("Domingo");
+ alert("Domingo");
 break;
 case 2:
- console.log("Segunda");
+ alert("Segunda");
 break;
 case 3:
- console.log("Terça");
+ alert("Terça");
 break;
 case 4:
- console.log("Quarta");
+ alert("Quarta");
 break;
 case 5:
- console.log("Quinta");
+ alert("Quinta");
 break;
 case 6:
- console.log("Sexta");
+ alert("Sexta");
 break;
- console.log("Sabado");
+ alert("Sabado");
 break;
 default:
-	console.log("Número digitado é inválido!!!");
+	alert("Número digitado é inválido!!!");
 break;
 	}
 }
